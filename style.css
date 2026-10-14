@@ -1,0 +1,128 @@
+.rarevo-cta p{
+  color:rgba(255,255,255,.8);
+}
+
+.rarevo-cta .rarevo-btn{
+  background:var(--rarevo-black);
+  color:var(--rarevo-white);
+}
+
+.rarevo-cta .rarevo-btn:hover{
+  background:var(--rarevo-white);
+  color:var(--rarevo-black);
+}
+
+/* ---------- Footer ---------- */
+.rarevo-footer,
+footer{
+  background:var(--rarevo-black);
+  color:var(--rarevo-white);
+  border-top:1px solid var(--rarevo-line);
+}
+
+.rarevo-footer-logo,
+.footer-logo{
+  color:var(--rarevo-white);
+  font-family:var(--rarevo-display);
+  font-weight:700;
+}
+
+.rarevo-footer-logo span,
+.footer-logo span{
+  color:var(--rarevo-blue);
+}
+
+.rarevo-footer a,
+footer a{
+  color:var(--rarevo-gray-2);
+  transition:color .25s ease;
+}
+
+.rarevo-footer a:hover,
+footer a:hover{
+  color:var(--rarevo-white);
+}
+
+.rarevo-footer h4,
+footer h4{
+  color:var(--rarevo-blue);
+}
+
+/* ---------- Optional grid background ---------- */
+.rarevo-grid-bg{
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:30px 30px;
+}
+
+/* ---------- Optional blue glow ---------- */
+.rarevo-blue-glow{
+  background:var(--rarevo-blue);
+  opacity:.12;
+  filter:blur(80px);
+  pointer-events:none;
+}
+
+/* ---------- Reveal animation ---------- */
+.rarevo-reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1);
+}
+
+.rarevo-reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ---------- Mobile ---------- */
+@media(max-width:900px){
+  .rarevo-navbar,
+  .navbar{
+    width:calc(100% - 20px);
+    top:10px;
+  }
+
+  .rarevo-nav,
+  .nav-links,
+  .nav-btn{
+    display:none;
+  }
+}
+
+@media(max-width:600px){
+  .rarevo-navbar,
+  .navbar{
+    min-height:60px;
+    padding:0 16px;
+    border-radius:12px;
+  }
+
+  .rarevo-logo,
+  .logo{
+    font-size:20px;
+  }
+
+  .rarevo-section-title{
+    letter-spacing:-.035em;
+  }
+}
+
+/* ---------- Accessibility ---------- */
+@media(prefers-reduced-motion:reduce){
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    animation:none!important;
+    transition:none!important;
+  }
+
+  .rarevo-reveal{
+    opacity:1;
+    transform:none;
+  }

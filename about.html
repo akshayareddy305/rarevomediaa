@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | RAREVO</title>
+<meta name="description" content="RAREVO creates premium websites, social media, marketing and product experiences for ambitious brands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* RAREVO — BLACK + ELECTRIC BLUE DESIGN SYSTEM (same tokens as index.html)
+   #050505 BLACK · #FFFFFF WHITE · #155BFF ELECTRIC BLUE · #2F7BFF BRIGHT BLUE · #1A1A1A CHARCOAL */
+:root{
+  --black:#050505;--white:#ffffff;
+  --blue:#155BFF;--blue-bright:#2F7BFF;
+  --charcoal:#1A1A1A;
+  --grey-1:#777777;--grey-2:#aaaaaa;--grey-3:#dddddd;
+  --soft:#f6f7f9;
+  --display:'Space Grotesk','Manrope',Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',Arial,Helvetica,sans-serif;background:var(--white);color:var(--black);overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button,a{-webkit-tap-highlight-color:transparent;}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;}
+
+/* NAVBAR (identical to homepage) */
+.rarevo-navbar{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:calc(100% - 40px);max-width:1450px;height:72px;padding:0 25px;display:flex;align-items:center;justify-content:space-between;background:rgba(5,5,5,.92);border:1px solid rgba(255,255,255,.12);border-radius:50px;box-shadow:0 10px 35px rgba(0,0,0,.14);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);z-index:9999;transition:.35s ease;}
+.rarevo-logo{font-family:var(--display);font-size:23px;font-weight:800;letter-spacing:-1.5px;color:#fff;}
+.rarevo-logo span{color:var(--blue);}
+.rarevo-nav{display:flex;align-items:center;gap:36px;}
+.rarevo-nav a{position:relative;font-size:14px;font-weight:600;color:#e8e8e8;transition:.3s ease;}
+.rarevo-nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--blue);transition:.3s ease;}
+.rarevo-nav a:hover{color:var(--blue-bright);}
+.rarevo-nav a:hover::after{width:100%;}
+.rarevo-nav-button{padding:13px 22px;border-radius:30px;background:var(--blue)!important;color:#fff!important;border:1px solid var(--blue);}
+.rarevo-nav-button:hover{background:#fff!important;color:var(--black)!important;border-color:#fff;}
+.rarevo-nav-button::after{display:none;}
+
+/* SHARED TYPE */
+.section{padding:120px 5%;}
+.section-inner{max-width:1350px;margin:auto;}
+.section-header{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:70px;}
+.section-number{color:var(--blue-bright);font-size:11px;font-weight:800;letter-spacing:3px;margin-bottom:15px;}
+.section-title{font-size:clamp(45px,6vw,76px);line-height:.95;letter-spacing:-4px;max-width:800px;}
+.section-description{max-width:400px;color:#999;font-size:17px;line-height:1.7;}
+
+/* INTRO BAR (white) */
+.intro-bar{padding:170px 5% 80px;background:var(--white);}
+.intro-bar-inner{max-width:1350px;margin:auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:50px;}
+.intro-bar-text{max-width:480px;}
+.intro-bar-text span{display:block;color:var(--blue);font-size:12px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;}
+.intro-bar-text p{color:#555;font-size:17px;line-height:1.7;}
+.intro-stats{display:flex;gap:44px;flex-wrap:wrap;}
+.intro-stat h3{font-size:clamp(34px,4vw,52px);letter-spacing:-3px;line-height:1;}
+.intro-stat p{margin-top:10px;color:#666;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap;}
+
+/* ABOUT (soft grey) */
+.about{background:var(--soft);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center;}
+.about h2{font-size:clamp(45px,6vw,76px);line-height:.95;letter-spacing:-4px;margin-bottom:50px;}
+.about .section-number{color:var(--blue);}
+.about-text{color:#555;line-height:1.7;font-size:18px;}
+.about-list{margin-top:40px;border-top:1px solid var(--grey-3);}
+.about-list div{padding:18px 0;border-bottom:1px solid var(--grey-3);display:flex;justify-content:space-between;gap:20px;font-size:15px;}
+.about-list strong{white-space:nowrap;font-family:var(--display);}
+.about-list span{color:var(--grey-1);text-align:right;}
+.about-mark{position:relative;aspect-ratio:1/1;border-radius:18px;background:var(--black);overflow:hidden;border:1px solid rgba(255,255,255,.08);}
+.about-mark svg{position:absolute;inset:0;width:100%;height:100%;}
+.about-stats{margin-top:90px;display:grid;grid-template-columns:repeat(4,1fr);}
+.about-stat{padding:20px 30px;border-left:1px solid #ccc;}
+.about-stat:first-child{border-left:none;}
+.about-stat h3{font-size:clamp(46px,5vw,70px);line-height:1;letter-spacing:-4px;}
+.about-stat p{margin-top:15px;color:#666;font-size:14px;}
+
+/* JOURNEY (white) */
+.journey{background:var(--white);}
+.journey .section-title{color:var(--black);}
+.journey .section-number{color:var(--blue);}
+.journey .section-description{color:#555;}
+.journey-content{display:grid;grid-template-columns:1fr 300px;gap:70px;align-items:start;}
+.journey-list{max-width:760px;}
+.journey-item{display:flex;gap:36px;padding:30px 0;border-top:1px solid var(--grey-3);transition:.35s ease;}
+.journey-item:last-child{border-bottom:1px solid var(--grey-3);}
+.journey-item:hover .journey-year{color:var(--blue);}
+.journey-year{width:64px;flex-shrink:0;font-family:var(--display);font-size:16px;font-weight:700;color:var(--black);transition:.3s ease;}
+.journey-body h3{font-size:22px;letter-spacing:-.5px;margin-bottom:8px;}
+.journey-body p{font-size:15px;color:#555;line-height:1.7;max-width:520px;}
+.journey-side{position:sticky;top:130px;display:flex;flex-direction:column;align-items:center;gap:34px;}
+.journey-orbit{position:relative;width:200px;height:200px;flex-shrink:0;}
+.journey-orbit .ring{position:absolute;border-radius:50%;border:1px solid var(--grey-3);}
+.journey-orbit .ring.r1{inset:0;}
+.journey-orbit .ring.r2{inset:24px;border-color:#ccc;}
+.journey-orbit .ring.r3{inset:48px;border-style:dashed;border-color:var(--blue);}
+.journey-orbit .dot-wrap{position:absolute;inset:0;animation:orbit-spin 10s linear infinite;}
+.journey-orbit .dot-wrap .dot{position:absolute;top:-4px;left:50%;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:var(--blue);}
+.journey-orbit .dot-wrap.rev{animation-duration:16s;animation-direction:reverse;}
+.journey-orbit .dot-wrap.rev .dot{width:6px;height:6px;margin-left:-3px;top:24px;background:var(--black);}
+.journey-orbit .core{position:absolute;inset:66px;border-radius:50%;background:var(--black);color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:var(--display);font-weight:700;font-size:22px;line-height:1.1;}
+.journey-orbit .core small{display:block;font-family:'Inter',Arial,sans-serif;font-weight:600;font-size:7px;letter-spacing:1.5px;color:var(--blue-bright);margin-top:3px;}
+@keyframes orbit-spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.journey-path{width:1px;height:110px;background:var(--grey-3);position:relative;overflow:hidden;}
+.journey-path::after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;background:var(--blue);transform:scaleY(0);transform-origin:top;transition:transform 1.7s cubic-bezier(.22,1,.36,1) .15s;}
+.reveal.active .journey-path::after{transform:scaleY(1);}
+.journey-note{text-align:center;}
+.journey-note strong{display:block;font-family:var(--display);font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.journey-note span{font-size:13px;color:var(--grey-1);}
+
+/* VALUES (black) */
+.values{background:var(--black);color:#fff;}
+.values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.value-card{position:relative;background:var(--charcoal);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:44px;overflow:hidden;transition:transform .4s ease,border-color .4s ease,background .4s ease;}
+.value-card:hover{transform:translateY(-8px);border-color:var(--blue);background:#202020;}
+.value-icon{width:54px;height:54px;padding:14px;margin-bottom:34px;border-radius:16px;color:var(--blue);background:rgba(21,91,255,.08);border:1px solid rgba(21,91,255,.35);transition:.35s ease;}
+.value-card:hover .value-icon{background:var(--blue);color:#fff;}
+.value-icon svg{width:100%;height:100%;display:block;}
+.value-card h3{font-size:22px;letter-spacing:-.5px;margin-bottom:13px;max-width:340px;color:#fff;}
+.value-card p{color:#999;font-size:15px;line-height:1.7;max-width:410px;}
+.value-card::after{content:"";position:absolute;left:44px;bottom:0;width:0;height:3px;background:var(--blue);transition:width .4s ease;}
+.value-card:hover::after{width:90px;}
+
+/* FOUNDER (soft grey) */
+.founder{background:var(--soft);}
+.founder .section-number{color:var(--blue);}
+.founder-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px;align-items:center;}
+.founder-portrait{position:relative;width:100%;max-width:520px;aspect-ratio:4/5;margin:0 auto;border-radius:28px;background:var(--charcoal);overflow:hidden;border:1px solid rgba(5,5,5,.12);}
+.founder-portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;}
+.founder-portrait-inner{position:absolute;inset:0;display:flex;align-items:flex-end;padding:32px;background:linear-gradient(0deg,rgba(5,5,5,.78) 0%,rgba(5,5,5,.3) 40%,rgba(5,5,5,0) 65%);}
+.founder-caption{position:relative;z-index:1;color:rgba(255,255,255,.85);font-size:13px;letter-spacing:1px;}
+.founder-caption strong{display:block;color:#fff;font-family:var(--display);font-size:22px;letter-spacing:-.5px;margin-bottom:6px;}
+.founder-quote{font-family:var(--display);font-weight:600;font-size:clamp(26px,2.8vw,36px);line-height:1.2;letter-spacing:-1.5px;max-width:600px;}
+.founder-bio{margin-top:30px;color:#555;line-height:1.7;font-size:17px;max-width:600px;}
+.founder-meta{margin-top:40px;padding-top:30px;border-top:1px solid var(--grey-3);display:flex;gap:44px;flex-wrap:wrap;}
+.founder-meta strong{display:block;font-family:var(--display);font-size:32px;letter-spacing:-1.5px;color:var(--black);}
+.founder-meta span{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#666;}
+
+/* CTA (same as homepage contact block) */
+.cta{position:relative;overflow:hidden;padding:145px 5%;background:var(--blue);color:#fff;text-align:center;}
+.cta::before{content:"RAREVO";position:absolute;right:-70px;bottom:-90px;font-family:var(--display);font-size:220px;font-weight:900;color:rgba(0,0,0,.08);pointer-events:none;}
+.cta-inner{position:relative;z-index:2;max-width:1100px;margin:auto;}
+.cta .section-number{color:#fff;font-size:12px;letter-spacing:3px;margin-bottom:20px;}
+.cta h2{font-size:clamp(50px,7vw,95px);line-height:.9;letter-spacing:-6px;}
+.cta p{max-width:560px;margin:30px auto 0;font-size:18px;line-height:1.6;color:rgba(255,255,255,.85);}
+.btn-primary{display:inline-flex;margin-top:35px;padding:17px 30px;background:var(--black);color:#fff;border-radius:40px;font-size:14px;font-weight:700;transition:.35s ease;}
+.btn-primary:hover{background:#fff;color:var(--black);transform:translateY(-4px);}
+
+/* FOOTER (same as homepage) */
+.rarevo-footer{background:var(--black);color:#fff;padding:70px 5% 35px;}
+.rarevo-footer-top{max-width:1400px;margin:auto;display:flex;justify-content:space-between;gap:50px;}
+.rarevo-footer-logo{font-family:var(--display);font-size:35px;font-weight:800;letter-spacing:-2px;}
+.rarevo-footer-logo span{color:var(--blue);}
+.rarevo-footer-description{max-width:360px;margin-top:15px;color:#888;font-size:14px;line-height:1.6;}
+.rarevo-footer-links{display:flex;gap:70px;}
+.rarevo-footer-column h4{margin-bottom:20px;color:var(--blue);font-size:11px;letter-spacing:2px;}
+.rarevo-footer-column a{display:block;margin-bottom:12px;color:#aaa;font-size:14px;transition:.3s ease;}
+.rarevo-footer-column a:hover{color:var(--blue-bright);}
+.rarevo-footer-bottom{max-width:1400px;margin:60px auto 0;padding-top:25px;border-top:1px solid #252525;display:flex;justify-content:space-between;color:#666;font-size:12px;}
+
+/* WHATSAPP (same as homepage) */
+.rarevo-whatsapp{position:fixed;right:24px;bottom:24px;width:58px;height:58px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#25D366;color:#fff;font-size:25px;z-index:9998;box-shadow:0 10px 30px rgba(0,0,0,.28);transition:.3s ease;}
+.rarevo-whatsapp:hover{transform:translateY(-5px) scale(1.05);}
+
+/* SCROLL REVEAL (same as homepage) */
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease;}
+.reveal.active{opacity:1;transform:translateY(0);}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important;}
+  .reveal{opacity:1;transform:none;}
+}
+
+/* RESPONSIVE */
+@media (max-width:1150px){.journey-content{grid-template-columns:1fr;}.journey-side{display:none;}}
+@media (max-width:1050px){
+  .rarevo-nav{gap:18px;}
+  .about-grid{grid-template-columns:1fr;gap:65px;}
+  .about-mark{max-width:460px;margin:0 auto;width:100%;}
+  .about-stats{grid-template-columns:repeat(2,1fr);gap:30px;}
+  .about-stat{border-left:none;border-top:1px solid #ccc;padding:25px 0;}
+  .founder-grid{grid-template-columns:1fr;gap:55px;}
+}
+@media (max-width:900px){
+  .section-header{flex-direction:column;align-items:flex-start;}
+  .values-grid{grid-template-columns:1fr;}
+}
+@media (max-width:700px){
+  .rarevo-navbar{top:10px;width:calc(100% - 20px);height:62px;padding:0 18px;background:rgba(5,5,5,.96);}
+  .rarevo-nav{display:none;}
+  .rarevo-logo{font-size:20px;}
+  .section{padding:90px 22px;}
+  .intro-bar{padding:130px 22px 60px;}
+  .intro-stats{width:100%;justify-content:space-between;gap:24px;}
+  .intro-stat h3{font-size:34px;}
+  .section-title,.about h2{font-size:48px;letter-spacing:-3px;}
+  .about-stats{margin-top:60px;}
+  .about-stat h3{font-size:50px;}
+  .journey-item{gap:20px;}
+  .journey-year{width:48px;font-size:14px;}
+  .value-card{padding:30px 26px;border-radius:19px;}
+  .value-card::after{left:26px;}
+  .founder-meta{gap:26px;}
+  .cta{padding:95px 22px;}
+  .cta h2{font-size:55px;letter-spacing:-4px;}
+  .cta::before{font-size:100px;}
+  .rarevo-footer{padding:60px 22px 30px;}
+  .rarevo-footer-top{flex-direction:column;}
+  .rarevo-footer-links{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+  .rarevo-footer-bottom{flex-direction:column;gap:10px;}
+}
+@media (max-width:400px){
+  .section-title,.about h2{font-size:42px;}
+  .cta h2{font-size:48px;}
+}
+</style>
+<style>
+/* FLOATING INSTAGRAM + WHATSAPP */
+.rarevo-float-social {
+
+  position: fixed;
+
+  right: 24px;
+  bottom: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+
+  z-index: 9998;
+
+}
+
+
+.rarevo-float-btn {
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+
+  transition: .3s ease;
+
+}
+
+
+.rarevo-float-btn svg {
+
+  width: 26px;
+  height: 26px;
+
+}
+
+
+.rarevo-float-instagram {
+
+  background:
+    radial-gradient(circle at 30% 107%,
+      #fdf497 0%, #fdf497 5%,
+      #fd5949 45%, #d6249f 60%,
+      #285AEB 90%);
+
+}
+
+
+.rarevo-float-whatsapp {
+
+  background: #25D366;
+
+}
+
+
+.rarevo-float-btn:hover {
+
+  transform: translateY(-5px) scale(1.07);
+
+}
+
+
+@media (max-width: 700px) {
+
+  .rarevo-float-social {
+    right: 16px;
+    bottom: 16px;
+    gap: 12px;
+  }
+
+  .rarevo-float-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .rarevo-float-btn svg {
+    width: 23px;
+    height: 23px;
+  }
+
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="rarevo-navbar">
+    <a href="index.html" class="rarevo-logo">RARE<span>VO</span></a>
+    <nav class="rarevo-nav">
+        </a>
+<nav class="rarevo-nav">
+<a href="index.html">
+      Home
+    </a>
+<a href="work.html">
+      Work
+    </a>
+<a href="services.html">
+      Services
+    </a>
+<a href="team.html">
+      Team
+    </a>
+<a href="about.html">
+      About us
+    </a>
+<a href="contact.html">
+      Contact us
+    </a>
+
+<a class="rarevo-nav-button" href="contact.html">
+      Get In Touch
+    </a>
+    </nav>
+</header>
+
+
+
+<section class="section about" id="about">
+    <div class="section-inner">
+        <div class="about-grid">
+            <div class="reveal">
+                <div class="section-number"></div>
+                
+       <style>
+  h2 {
+    font-size: 32px;
+  }
+</style>
+
+<h2>WE MAKE<br>BRANDS<br>WHOLE.</h2>
+                <div class="about-mark">
+                    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="200" cy="200" r="150" fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1.2"/>
+                        <circle cx="200" cy="200" r="105" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1.2"/>
+                        <line x1="60" y1="200" x2="340" y2="200" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
+                        <line x1="200" y1="60" x2="200" y2="340" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
+                        <rect x="150" y="150" width="100" height="100" fill="none" stroke="#155BFF" stroke-width="1.6" transform="rotate(45 200 200)"/>
+                        <circle cx="200" cy="200" r="34" fill="#155BFF"/>
+                        <path d="M120 300 L160 260 M240 140 L280 100" stroke="#2F7BFF" stroke-width="1.4" stroke-linecap="round"/>
+                        <circle cx="115" cy="305" r="4" fill="#2F7BFF"/>
+                        <circle cx="285" cy="95" r="4" fill="#2F7BFF"/>
+                        <text x="200" y="208" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="26" fill="#FFFFFF" letter-spacing="2">R</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="reveal">
+                <p class="about-text">
+                    RAREVO started as a small studio building
+                    websites for local brands — and grew into
+                    something wider, because a brand is never
+                    just a site.
+                    <br><br>
+                    Today we design and build websites, run
+                    social media for our clients, plan and execute
+                    marketing campaigns, and design and sell
+                    our own line of bags. Four different crafts,
+                    one belief behind them: good design and
+                    good strategy make a brand feel whole,
+                    online and off.
+                </p>
+                <div class="about-list">
+                    <div><strong>Websites</strong><span>Design &amp; development</span></div>
+                    <div><strong>Social Media</strong><span>Content, growth &amp; community</span></div>
+                    <div><strong>Marketing</strong><span>Campaigns built on data</span></div>
+                    <div><strong>Bags</strong><span>Our own product line</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="about-stats reveal">
+            <div class="about-stat"><h3>50+</h3><p>Brands Built</p></div>
+            <div class="about-stat"><h3>4</h3><p>Services In-House</p></div>
+            <div class="about-stat"><h3>3+</h3><p>Years Running</p></div>
+            <div class="about-stat"><h3>1</h3><p>Team You Talk To</p></div>
+        </div>
+    </div>
+</section>
+<div class="intro-bar">
+    <div class="intro-bar-inner reveal">
+        <div class="intro-bar-text">
+            <span>One Studio, Four Crafts</span>
+            <p>We didn't set out to be a full agency. Clients kept asking for one more thing — social, marketing, product — and each time the answer came from the same small team, held to the same standard.</p>
+        </div>
+        <div class="intro-stats">
+            <div class="intro-stat"><h3>2022</h3><p>Studio Founded</p></div>
+            <div class="intro-stat"><h3>50+</h3><p>Projects Shipped</p></div>
+            <div class="intro-stat"><h3>4</h3><p>Crafts, One Studio</p></div>
+            <div class="intro-stat"><h3>100%</h3><p>Founder-Led</p></div>
+        </div>
+    </div>
+</div>
+
+<section class="section journey">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div>
+                <div class="section-number">05 / OUR JOURNEY</div>
+                <h2 class="section-title">HOW WE<br>GOT HERE.</h2>
+            </div>
+            <p class="section-description">
+                From a two-person web studio to four crafts under one name — every step came from a client asking for more.
+            </p>
+        </div>
+        <div class="journey-content">
+            <div class="journey-list reveal">
+                <div class="journey-item">
+                    <div class="journey-year">2022</div>
+                    <div class="journey-body">
+                        <h3>RAREVO opens as a web studio</h3>
+                        <p>Started designing and building websites for local brands who wanted something better than a template.</p>
+                    </div>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-year">2023</div>
+                    <div class="journey-body">
+                        <h3>Social media joins the roster</h3>
+                        <p>Clients kept asking who'd run their Instagram after launch — so we built out content, growth and community as a service.</p>
+                    </div>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-year">2023</div>
+                    <div class="journey-body">
+                        <h3>Marketing and paid campaigns follow</h3>
+                        <p>A good site and good content still need an audience. We added data-led campaigns to close the loop.</p>
+                    </div>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-year">2024</div>
+                    <div class="journey-body">
+                        <h3>RAREVO launches its own bag line</h3>
+                        <p>We wanted proof that our design thinking holds up off-screen too — so we designed, made and sold a physical product ourselves.</p>
+                    </div>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-year">2026</div>
+                    <div class="journey-body">
+                        <h3>Today: four crafts, one studio</h3>
+                        <p>Websites, social, marketing and product, all run by the same small team — so nothing about your brand feels outsourced.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="journey-side reveal">
+                <div class="journey-orbit">
+                    <div class="ring r1"></div>
+                    <div class="ring r2"></div>
+                    <div class="ring r3"></div>
+                    <div class="dot-wrap"><span class="dot"></span></div>
+                    <div class="dot-wrap rev"><span class="dot"></span></div>
+                    <div class="core">4<small>YEARS RUNNING</small></div>
+                </div>
+                <div class="journey-path"></div>
+                <div class="journey-note">
+                    <strong>2022 — 2026</strong>
+                    <span>Still the same small team</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section values">
+    <div class="section-inner">
+        <div class="section-header reveal">
+            <div>
+                <div class="section-number">06 / WHAT WE STAND FOR</div>
+                <h2 class="section-title">HOW WE<br>WORK.</h2>
+            </div>
+            <p class="section-description">
+                The four things that haven't changed since the first project.
+            </p>
+        </div>
+        <div class="values-grid reveal">
+            <div class="value-card">
+                <div class="value-icon">
+                    <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="22" cy="22" r="20" stroke="currentColor" stroke-width="1.4"/>
+                        <path d="M22 12v10l7 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="22" cy="22" r="2" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h3>Strategy first, template never</h3>
+                <p>Every project starts with your goals and audience, not a stock layout we reskin with your logo.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="22" cy="22" r="19" stroke="currentColor" stroke-width="1.4"/>
+                        <circle cx="22" cy="22" r="7" stroke="currentColor" stroke-width="1.4"/>
+                        <circle cx="22" cy="7" r="2" fill="currentColor"/>
+                        <circle cx="35.5" cy="15" r="2" fill="currentColor"/>
+                        <circle cx="35.5" cy="29" r="2" fill="currentColor"/>
+                        <circle cx="22" cy="37" r="2" fill="currentColor"/>
+                        <circle cx="8.5" cy="29" r="2" fill="currentColor"/>
+                        <circle cx="8.5" cy="15" r="2" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h3>One brand, every channel</h3>
+                <p>Your site, your social presence and your campaigns are built to feel like the same business, not three different vendors.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="1.4"/>
+                        <circle cx="30" cy="16" r="6" stroke="currentColor" stroke-width="1.4"/>
+                        <path d="M6 37c1-7 6-11 10-11s9 4 10 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                        <path d="M24 26c4 0 9 4 10 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>You work with the people doing the work</h3>
+                <p>No account managers relaying messages. You talk directly to the designers, developers and Gowri.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 34V22M18 34V14M28 34V19M38 34V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M8 22l10-8 10 5 10-10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Judged by results, not just looks</h3>
+                <p>Every deliverable — a page, a post, a campaign — is measured by whether it moves the business forward.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section founder">
+    <div class="section-inner">
+        <div class="section-header" style="margin-bottom:50px;">
+            <div class="reveal">
+                <div class="section-number">07 / FOUNDER</div>
+            </div>
+        </div>
+        <div class="founder-grid">
+            <div class="founder-portrait reveal">
+                <img src="7a5efdd5-b9e1-41e4-8b2e-0701b93c902c.png" alt="Gowri Priya Yadav, Founder and Creative Director of RAREVO" loading="lazy">
+                <div class="founder-portrait-inner">
+                    <div class="founder-caption">
+                        <strong>Gowri Priya Yadav</strong>
+                        Founder &amp; Creative Director, RAREVO
+                    </div>
+                </div>
+            </div>
+            <div class="reveal">
+                <p class="founder-quote">"I didn't want to just build websites. I wanted to build brands people could actually hold, click, and scroll through."</p>
+                <p class="founder-bio">
+                    Gowri Priya Yadav founded RAREVO out of a simple frustration: agencies
+                    that built a nice site and disappeared, leaving the rest of the
+                    brand — the social presence, the marketing, the physical product —
+                    to figure itself out. She started with web design, added social
+                    media and marketing as clients kept asking for more, and later
+                    launched RAREVO's own bag line to prove the same design thinking
+                    works off-screen too.
+                    <br><br>
+                    She still leads every brand strategy personally, and the studio's
+                    standard hasn't changed since day one: nothing ships unless it's
+                    built around the client's actual goals, not a template.
+                </p>
+                <div class="founder-meta">
+                    <div><strong>4</strong><span>Services under one roof</span></div>
+                    <div><strong>100%</strong><span>Hands-on on every project</span></div>
+                    <div><strong>2022</strong><span>Founded RAREVO</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="cta-inner reveal">
+        <div class="section-number">HAVE A PROJECT?</div>
+        <h2>LET'S BUILD<br>SOMETHING.</h2>
+        <p>Tell us what you're building and we'll help you turn the idea into a digital experience that works.</p>
+        <a href="index.html#contact" class="btn-primary">START A CONVERSATION →</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="rarevo-footer">
+  <div class="rarevo-footer-top">
+    <div>
+      <div class="rarevo-footer-logo">RARE<span>VO</span></div>
+      <p class="rarevo-footer-description">Websites, e-commerce, branding and digital marketing for businesses ready to grow online.</p>
+    </div>
+    <div class="rarevo-footer-links">
+      <div class="rarevo-footer-column">
+        <h4>EXPLORE</h4>
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="team.html">Team</a>
+        <a href="about.html">About</a>
+        <a href="process.html">Process</a>
+      </div>
+      <div class="rarevo-footer-column">
+        <h4>FOLLOW US</h4>
+        <a href="https://www.instagram.com/rarevo__?stkn=bHd3cmw3cmZneDg2" target="_blank" rel="noopener">@rarevo__ · Studio</a>
+        <a href="https://www.instagram.com/rarevomedia.in?stkn=OGgza2xzYnNobXg3" target="_blank" rel="noopener">@rarevomedia.in · Social &amp; Marketing</a>
+        <a href="https://www.instagram.com/luxurylabel.bags?stkn=MXJycTBoa284cjk0Yw==" target="_blank" rel="noopener">@luxurylabel.bags · Bags</a>
+      </div>
+      <div class="rarevo-footer-column">
+        <h4>CONNECT</h4>
+        <a href="https://wa.me/916301559694" target="_blank" rel="noopener">WhatsApp · We reply fast</a>
+        <a href="https://wa.me/919177731239" target="_blank" rel="noopener">WhatsApp · Order &amp; bag enquiries</a>
+        <a href="contact.html">Contact Form</a>
+      </div>
+    </div>
+  </div>
+  <div class="rarevo-footer-bottom">
+    <span>© 2026 Rarevo. All rights reserved.</span>
+    <span>DESIGN · DEVELOPMENT · MARKETING</span>
+  </div>
+</footer>
+
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/916301559694" target="_blank" rel="noopener" class="rarevo-whatsapp" aria-label="Chat with Rarevo on WhatsApp">☎</a>
+
+<script>
+/* Navbar scroll shadow (same as homepage) */
+const navbar = document.querySelector(".rarevo-navbar");
+window.addEventListener("scroll", function(){
+    navbar.style.boxShadow = window.scrollY > 40 ? "0 10px 35px rgba(0,0,0,.10)" : "none";
+});
+
+/* Scroll reveal (same as homepage) */
+const revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+        if(entry.isIntersecting){
+            entry.target.classList.add("active");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: .12 });
+document.querySelectorAll(".reveal").forEach(function(el){ revealObserver.observe(el); });
+</script>
+<!-- FLOATING INSTAGRAM + WHATSAPP -->
+<div class="rarevo-float-social">
+
+  <!-- INSTAGRAM -->
+  <a
+    href="https://www.instagram.com/rarevomedia.in/"
+    target="_blank"
+    rel="noopener"
+    class="rarevo-float-btn rarevo-float-instagram"
+    aria-label="Follow Rarevo on Instagram"
+  >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+    </svg>
+  </a>
+
+  <!-- WHATSAPP -->
+  <a
+    href="https://wa.me/9177731239"
+    target="_blank"
+    rel="noopener"
+    class="rarevo-float-btn rarevo-float-whatsapp"
+    aria-label="Chat with Rarevo on WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.47 9.47 0 0 1-4.83-1.32l-.35-.2-3.58.94.96-3.49-.23-.36a9.45 9.45 0 0 1-1.45-5.04c0-5.22 4.25-9.47 9.48-9.47a9.4 9.4 0 0 1 6.7 2.78 9.4 9.4 0 0 1 2.77 6.7c0 5.23-4.25 9.46-9.46 9.46zM20.1 3.9A11.4 11.4 0 0 0 12.04.5C5.73.5.6 5.63.6 11.94c0 2.02.53 3.99 1.53 5.73L.5 23.5l5.97-1.57a11.43 11.43 0 0 0 5.57 1.42h.01c6.31 0 11.44-5.13 11.44-11.44 0-3.06-1.19-5.93-3.35-8.09z"/>
+    </svg>
+  </a>
+
+</div>
+
+</body>
+</html>

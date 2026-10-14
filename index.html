@@ -1,0 +1,7046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>RAREVO — Digital Growth Partner</title>
+
+<meta
+  name="description"
+  content="Rarevo builds high-converting websites, e-commerce experiences, brands and digital marketing strategies."
+>
+
+<style>
+
+/* =========================================================
+   RAREVO
+   BLACK + ELECTRIC BLUE DESIGN SYSTEM
+
+   #050505  BLACK
+   #FFFFFF  WHITE
+   #155BFF  ELECTRIC BLUE
+   #2F7BFF  BRIGHT BLUE
+   #1A1A1A  CHARCOAL
+========================================================= */
+
+:root {
+
+  --black: #050505;
+  --white: #ffffff;
+
+  --orange: #155BFF;
+  --orange-light: #2F7BFF;
+
+  --charcoal: #1A1A1A;
+
+  --grey-1: #777777;
+  --grey-2: #aaaaaa;
+  --grey-3: #dddddd;
+
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+
+  margin: 0;
+
+  background: var(--white);
+
+  color: var(--black);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  overflow-x: hidden;
+
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.rarevo-navbar {
+
+  position: fixed;
+
+  top: 18px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: calc(100% - 40px);
+
+  max-width: 1450px;
+
+  height: 72px;
+
+  padding: 0 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background:
+    rgba(255,255,255,.94);
+
+  border:
+    1px solid rgba(0,0,0,.08);
+
+  border-radius: 50px;
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+
+  z-index: 9999;
+
+  transition:
+    .35s ease;
+
+}
+
+
+.rarevo-logo {
+
+  font-size: 23px;
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+
+}
+
+
+.rarevo-logo span {
+  color: var(--orange);
+}
+
+
+.rarevo-nav {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 36px;
+
+}
+
+
+.rarevo-nav a {
+
+  position: relative;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #222;
+
+  transition: .3s ease;
+
+}
+
+
+.rarevo-nav a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -6px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: var(--orange);
+
+  transition: .3s ease;
+
+}
+
+
+.rarevo-nav a:hover {
+  color: var(--orange);
+}
+
+
+.rarevo-nav a:hover::after {
+  width: 100%;
+}
+
+
+.rarevo-nav-button {
+
+  padding:
+    13px 22px;
+
+  border-radius:
+    30px;
+
+  background:
+    var(--black);
+
+  color:
+    var(--white) !important;
+
+}
+
+
+.rarevo-nav-button:hover {
+
+  background:
+    var(--orange);
+
+}
+
+
+.rarevo-nav-button::after {
+  display: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.rarevo-hero {
+
+  position: relative;
+
+  min-height:
+    100vh;
+
+  padding:
+    150px 6%
+    80px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    var(--white);
+
+}
+
+
+.hero-grid {
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.035) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    70px 70px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent 85%
+    );
+
+}
+
+
+/* Electric blue glow */
+
+.hero-glow {
+
+  position: absolute;
+
+  width: 480px;
+  height: 480px;
+
+  right: -180px;
+  top: 120px;
+
+  background:
+    var(--orange);
+
+  opacity: .09;
+
+  border-radius: 50%;
+
+  filter:
+    blur(80px);
+
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 1420px;
+
+  margin: auto;
+
+}
+
+
+.hero-eyebrow {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 25px;
+
+  color: var(--orange);
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+}
+
+
+.hero-eyebrow::before {
+
+  content: "";
+
+  width: 35px;
+
+  height: 2px;
+
+  background:
+    var(--orange);
+
+}
+
+
+.hero-heading {
+
+  max-width: 900px;
+
+  font-size:
+    clamp(
+      58px,
+      8vw,
+      115px
+    );
+
+  line-height:
+    .88;
+
+  letter-spacing:
+    -7px;
+
+  font-weight:
+    700;
+
+}
+
+
+.hero-heading .orange {
+  color: var(--orange);
+}
+
+
+.hero-description {
+
+  max-width: 570px;
+
+  margin-top: 35px;
+
+  color: #555;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+
+}
+
+
+.hero-description strong {
+  color: var(--black);
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 35px;
+
+}
+
+
+.hero-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    16px 27px;
+
+  border-radius:
+    40px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition:
+    .35s ease;
+
+}
+
+
+.hero-button-primary {
+
+  background:
+    var(--orange);
+
+  color:
+    var(--white);
+
+}
+
+
+.hero-button-primary:hover {
+
+  background:
+    var(--black);
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(255,90,31,.22);
+
+}
+
+
+.hero-button-secondary {
+
+  border:
+    1px solid #ccc;
+
+  color:
+    var(--black);
+
+  background:
+    var(--white);
+
+}
+
+
+.hero-button-secondary:hover {
+
+  border-color:
+    var(--orange);
+
+  color:
+    var(--orange);
+
+  transform:
+    translateY(-4px);
+
+}
+
+
+/* HERO DEVICE */
+
+.hero-device {
+
+  position: absolute;
+
+  right: 7%;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    rotate(-6deg);
+
+  width: 280px;
+
+  padding: 10px;
+
+  border-radius: 38px;
+
+  background:
+    var(--black);
+
+  box-shadow:
+    0 35px 80px
+    rgba(0,0,0,.20);
+
+  z-index: 3;
+
+  transition:
+    transform .25s ease;
+
+}
+
+
+.hero-device img {
+
+  width: 100%;
+
+  height: 530px;
+
+  object-fit: cover;
+
+  border-radius: 29px;
+
+}
+
+
+/* =========================================================
+   MOVING SERVICE STRIP
+========================================================= */
+
+.rarevo-flow-strip {
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background:
+    var(--black);
+
+  border-top:
+    1px solid #222;
+
+  border-bottom:
+    1px solid #222;
+
+}
+
+
+.rarevo-flow-content {
+
+  min-width:
+    max-content;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  padding:
+    21px 0;
+
+  animation:
+    rarevoMarquee
+    25s linear
+    infinite;
+
+}
+
+
+.rarevo-flow-content span {
+
+  color:
+    #ffffff;
+
+  font-size:
+    13px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    2px;
+
+  white-space:
+    nowrap;
+
+}
+
+
+.rarevo-flow-content
+.flow-brand {
+
+  color:
+    var(--orange);
+
+  font-size:
+    15px;
+
+}
+
+
+.flow-line {
+
+  width:
+    45px;
+
+  height:
+    1px;
+
+  background:
+    #444;
+
+  position:
+    relative;
+
+}
+
+
+.flow-dot {
+
+  position:
+    absolute;
+
+  width:
+    5px;
+
+  height:
+    5px;
+
+  border-radius:
+    50%;
+
+  background:
+    var(--orange);
+
+  top:
+    -2px;
+
+  left:
+    50%;
+
+}
+
+
+@keyframes rarevoMarquee {
+
+  from {
+    transform:
+      translateX(0);
+  }
+
+  to {
+    transform:
+      translateX(-35%);
+  }
+
+}
+
+
+/* =========================================================
+   INTRO / GROWTH SECTION
+========================================================= */
+
+.rarevo-intro-section {
+
+  background:
+    var(--white);
+
+  color:
+    var(--black);
+
+  padding-bottom:
+    120px;
+
+}
+
+
+.rarevo-client-strip {
+
+  min-height:
+    105px;
+
+  padding:
+    0 5%;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    25px;
+
+  border-bottom:
+    1px solid #e6e6e6;
+
+  overflow:
+    hidden;
+
+}
+
+
+.rarevo-strip-logo {
+
+  flex-shrink:
+    0;
+
+  color:
+    #999;
+
+  font-size:
+    13px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    2px;
+
+  white-space:
+    nowrap;
+
+  transition:
+    .3s ease;
+
+}
+
+
+.rarevo-strip-logo:hover {
+
+  color:
+    var(--orange);
+
+}
+
+
+.rarevo-strip-logo:first-child {
+
+  color:
+    var(--black);
+
+  font-size:
+    17px;
+
+  letter-spacing:
+    -1px;
+
+}
+
+
+.rarevo-intro-container {
+
+  width:
+    90%;
+
+  max-width:
+    1350px;
+
+  margin:
+    auto;
+
+  padding-top:
+    115px;
+
+}
+
+
+.rarevo-intro-label {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  margin-bottom:
+    25px;
+
+  color:
+    var(--orange);
+
+  font-size:
+    12px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    2.5px;
+
+}
+
+
+.rarevo-intro-label::before {
+
+  content:
+    "";
+
+  width:
+    28px;
+
+  height:
+    2px;
+
+  background:
+    var(--orange);
+
+}
+
+
+.rarevo-intro-heading {
+
+  max-width:
+    1050px;
+
+  font-size:
+    clamp(
+      48px,
+      6vw,
+      82px
+    );
+
+  line-height:
+    .95;
+
+  letter-spacing:
+    -5px;
+
+  font-weight:
+    600;
+
+}
+
+
+.rarevo-intro-heading span {
+
+  color:
+    var(--orange);
+
+}
+
+
+/* TWO COLUMN */
+
+.rarevo-intro-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    .85fr 1.15fr;
+
+  gap:
+    100px;
+
+  margin-top:
+    95px;
+
+}
+
+
+.rarevo-intro-left {
+
+  max-width:
+    480px;
+
+}
+
+
+.rarevo-intro-text {
+
+  margin:
+    0 0 22px;
+
+  color:
+    #555;
+
+  font-size:
+    18px;
+
+  line-height:
+    1.6;
+
+}
+
+
+.rarevo-intro-text:first-child {
+
+  color:
+    #222;
+
+  font-size:
+    23px;
+
+}
+
+
+.rarevo-intro-text.secondary {
+
+  font-size:
+    16px;
+
+}
+
+
+/* BUTTON */
+
+.rarevo-intro-button {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    18px;
+
+  margin-top:
+    15px;
+
+  padding:
+    16px 25px;
+
+  background:
+    var(--black);
+
+  color:
+    white;
+
+  border-radius:
+    40px;
+
+  font-size:
+    14px;
+
+  font-weight:
+    700;
+
+  transition:
+    .35s ease;
+
+}
+
+
+.rarevo-intro-button:hover {
+
+  background:
+    var(--orange);
+
+  transform:
+    translateY(-4px);
+
+}
+
+
+.rarevo-intro-button span {
+
+  transition:
+    .3s ease;
+
+}
+
+
+.rarevo-intro-button:hover span {
+
+  transform:
+    translateX(5px);
+
+}
+
+
+/* =========================================================
+   CAPABILITIES
+========================================================= */
+
+.rarevo-capabilities {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  border-top:
+    1px solid #ddd;
+
+  border-left:
+    1px solid #ddd;
+
+}
+
+
+.rarevo-capability {
+
+  min-height:
+    205px;
+
+  padding:
+    25px;
+
+  border-right:
+    1px solid #ddd;
+
+  border-bottom:
+    1px solid #ddd;
+
+  transition:
+    .35s ease;
+
+}
+
+
+.rarevo-capability:hover {
+
+  background:
+    #fff5f0;
+
+}
+
+
+.rarevo-capability-top {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  margin-bottom:
+    35px;
+
+}
+
+
+.rarevo-capability-number {
+
+  color:
+    #999;
+
+  font-size:
+    11px;
+
+  font-weight:
+    700;
+
+}
+
+
+.rarevo-capability-arrow {
+
+  color:
+    #999;
+
+  transition:
+    .3s ease;
+
+}
+
+
+.rarevo-capability:hover
+.rarevo-capability-arrow {
+
+  color:
+    var(--orange);
+
+  transform:
+    translate(4px,-4px);
+
+}
+
+
+.rarevo-capability h3 {
+
+  margin-bottom:
+    10px;
+
+  font-size:
+    18px;
+
+}
+
+
+.rarevo-capability p {
+
+  color:
+    #777;
+
+  font-size:
+    14px;
+
+  line-height:
+    1.5;
+
+}
+
+
+/* =========================================================
+   BOTTOM LINE
+========================================================= */
+
+.rarevo-bottom-line {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  gap:
+    30px;
+
+  margin-top:
+    90px;
+
+  padding-top:
+    25px;
+
+  border-top:
+    1px solid #ddd;
+
+}
+
+
+.rarevo-bottom-line span {
+
+  color:
+    #999;
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    2px;
+
+}
+
+
+.rarevo-bottom-line span:nth-child(2) {
+
+  color:
+    var(--orange);
+
+}
+
+
+/* =========================================================
+   IMPACT / WORK
+========================================================= */
+
+.rarevo-work {
+
+  background:
+    var(--black);
+
+  color:
+    white;
+
+  padding:
+    130px 5%;
+
+}
+
+
+.rarevo-section-heading {
+
+  max-width:
+    900px;
+
+  margin:
+    0 auto 70px;
+
+  text-align:
+    center;
+
+}
+
+
+.rarevo-section-eyebrow {
+
+  color:
+    var(--orange);
+
+  font-size:
+    11px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    3px;
+
+  margin-bottom:
+    15px;
+
+}
+
+
+.rarevo-section-heading h2 {
+
+  font-size:
+    clamp(
+      45px,
+      6vw,
+      76px
+    );
+
+  line-height:
+    .95;
+
+  letter-spacing:
+    -4px;
+
+}
+
+
+.rarevo-section-heading p {
+
+  margin-top:
+    20px;
+
+  color:
+    #999;
+
+  font-size:
+    17px;
+
+}
+
+
+/* PROJECT GRID */
+
+.rarevo-project-grid {
+
+  max-width:
+    1450px;
+
+  margin:
+    auto;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:
+    60px 40px;
+
+}
+
+
+.rarevo-project {
+
+  cursor:
+    pointer;
+
+}
+
+
+.rarevo-project-image {
+
+  position:
+    relative;
+
+  height:
+    430px;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    18px;
+
+  background:
+    var(--charcoal);
+
+}
+
+
+.rarevo-project-image::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.45),
+      transparent 60%
+    );
+
+}
+
+
+.rarevo-project-image img {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  transition:
+    transform .7s ease;
+
+}
+
+
+.rarevo-project:hover
+.rarevo-project-image img {
+
+  transform:
+    scale(1.06);
+
+}
+
+
+.rarevo-project-number {
+
+  position:
+    absolute;
+
+  top:
+    22px;
+
+  left:
+    22px;
+
+  z-index:
+    2;
+
+  padding:
+    8px 12px;
+
+  background:
+    var(--orange);
+
+  color:
+    white;
+
+  border-radius:
+    30px;
+
+  font-size:
+    11px;
+
+  font-weight:
+    800;
+
+}
+
+
+.rarevo-project-info {
+
+  padding-top:
+    20px;
+
+}
+
+
+.rarevo-project-info h3 {
+
+  font-size:
+    25px;
+
+  margin-bottom:
+    8px;
+
+}
+
+
+.rarevo-project-info p {
+
+  color:
+    #999;
+
+  font-size:
+    14px;
+
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.rarevo-stats {
+
+  background:
+    #f5f5f3;
+
+  padding:
+    125px 5%;
+
+}
+
+
+.rarevo-stats-inner {
+
+  max-width:
+    1350px;
+
+  margin:
+    auto;
+
+}
+
+
+.rarevo-stats-title {
+
+  max-width:
+    950px;
+
+  font-size:
+    clamp(
+      45px,
+      6vw,
+      75px
+    );
+
+  line-height:
+    .95;
+
+  letter-spacing:
+    -4px;
+
+}
+
+
+.rarevo-stats-title span {
+
+  color:
+    var(--orange);
+
+}
+
+
+.rarevo-stat-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  margin-top:
+    90px;
+
+}
+
+
+.rarevo-stat {
+
+  padding:
+    20px 30px;
+
+  border-left:
+    1px solid #ccc;
+
+}
+
+
+.rarevo-stat:first-child {
+
+  border-left:
+    none;
+
+}
+
+
+.rarevo-stat-number {
+
+  font-size:
+    clamp(
+      50px,
+      6vw,
+      82px
+    );
+
+  font-weight:
+    700;
+
+  line-height:
+    1;
+
+  letter-spacing:
+    -4px;
+
+}
+
+
+.rarevo-stat-number span {
+
+  color:
+    var(--orange);
+
+}
+
+
+.rarevo-stat-label {
+
+  margin-top:
+    15px;
+
+  color:
+    #666;
+
+  font-size:
+    14px;
+
+}
+
+
+/* =========================================================
+   TOOLKIT
+========================================================= */
+
+.rarevo-toolkit {
+
+  background:
+    var(--black);
+
+  color:
+    white;
+
+  padding:
+    125px 5%;
+
+}
+
+
+.rarevo-toolkit-header {
+
+  max-width:
+    900px;
+
+  margin:
+    0 auto 65px;
+
+  text-align:
+    center;
+
+}
+
+
+.rarevo-toolkit-eyebrow {
+
+  color:
+    var(--orange);
+
+  font-size:
+    11px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    3px;
+
+  margin-bottom:
+    13px;
+
+}
+
+
+.rarevo-toolkit-header h2 {
+
+  font-size:
+    clamp(
+      45px,
+      6vw,
+      72px
+    );
+
+  line-height:
+    1;
+
+  letter-spacing:
+    -4px;
+
+}
+
+
+.rarevo-toolkit-header h2 span {
+
+  color:
+    var(--orange);
+
+}
+
+
+.rarevo-toolkit-header p {
+
+  margin-top:
+    20px;
+
+  color:
+    #999;
+
+  font-size:
+    17px;
+
+}
+
+
+.rarevo-tool-grid {
+
+  max-width:
+    1450px;
+
+  margin:
+    auto;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(5,1fr);
+
+  gap:
+    38px 20px;
+
+}
+
+
+.rarevo-tool {
+
+  text-align:
+    center;
+
+}
+
+
+.rarevo-tool-box {
+
+  height:
+    115px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  background:
+    var(--charcoal);
+
+  border:
+    1px solid #333;
+
+  border-radius:
+    14px;
+
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  transition:
+    .35s ease;
+
+}
+
+
+.rarevo-tool-box::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  top:
+    0;
+
+  left:
+    0;
+
+  width:
+    0;
+
+  height:
+    3px;
+
+  background:
+    var(--orange);
+
+  transition:
+    .4s ease;
+
+}
+
+
+.rarevo-tool:hover
+.rarevo-tool-box {
+
+  transform:
+    translateY(-8px);
+
+  border-color:
+    var(--orange);
+
+  box-shadow:
+    0 18px 40px
+    rgba(255,90,31,.13);
+
+}
+
+
+.rarevo-tool:hover
+.rarevo-tool-box::before {
+
+  width:
+    100%;
+
+}
+
+
+.rarevo-tool-name {
+
+  margin-top:
+    13px;
+
+  color:
+    #fff;
+
+  font-size:
+    14px;
+
+  font-weight:
+    600;
+
+  transition:
+    .3s ease;
+
+}
+
+
+.rarevo-tool:hover
+.rarevo-tool-name {
+
+  color:
+    var(--orange-light);
+
+}
+
+
+/* TOOL LOGOS */
+
+.rarevo-tool-logo {
+
+  font-size:
+    42px;
+
+  font-weight:
+    800;
+
+}
+
+
+.logo-shopify {
+  color: #95BF47;
+}
+
+.logo-react {
+  color: #61DAFB;
+}
+
+.logo-js {
+  color: #F7DF1E;
+}
+
+.logo-wordpress {
+  color: white;
+}
+
+.logo-canva {
+  color: var(--orange-light);
+  font-style: italic;
+}
+
+.logo-ps {
+
+  width:
+    55px;
+
+  height:
+    55px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border:
+    2px solid var(--orange);
+
+  color:
+    var(--orange);
+
+  border-radius:
+    8px;
+
+  font-family:
+    Georgia,
+    serif;
+
+}
+
+
+.logo-chatgpt {
+
+  width:
+    55px;
+
+  height:
+    55px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border:
+    2px solid var(--orange);
+
+  border-radius:
+    50%;
+
+  color:
+    var(--orange);
+
+  font-size:
+    34px;
+
+}
+
+
+.logo-meta {
+  color: white;
+}
+
+
+.logo-google {
+  color: var(--orange);
+}
+
+
+.logo-figma {
+  color: #155BFF;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.rarevo-contact {
+
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  padding:
+    145px 5%;
+
+  background:
+    var(--orange);
+
+  color:
+    white;
+
+}
+
+
+.rarevo-contact::before {
+
+  content:
+    "RAREVO";
+
+  position:
+    absolute;
+
+  right:
+    -70px;
+
+  bottom:
+    -90px;
+
+  font-size:
+    220px;
+
+  font-weight:
+    900;
+
+  color:
+    rgba(0,0,0,.08);
+
+  pointer-events:
+    none;
+
+}
+
+
+.rarevo-contact-inner {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  max-width:
+    1100px;
+
+  margin:
+    auto;
+
+}
+
+
+.rarevo-contact-eyebrow {
+
+  font-size:
+    12px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    3px;
+
+  margin-bottom:
+    20px;
+
+}
+
+
+.rarevo-contact h2 {
+
+  max-width:
+    950px;
+
+  font-size:
+    clamp(
+      50px,
+      7vw,
+      95px
+    );
+
+  line-height:
+    .9;
+
+  letter-spacing:
+    -6px;
+
+}
+
+
+.rarevo-contact p {
+
+  max-width:
+    560px;
+
+  margin-top:
+    30px;
+
+  font-size:
+    18px;
+
+  line-height:
+    1.6;
+
+  color:
+    rgba(255,255,255,.85);
+
+}
+
+
+.rarevo-contact-button {
+
+  display:
+    inline-flex;
+
+  margin-top:
+    35px;
+
+  padding:
+    17px 30px;
+
+  background:
+    var(--black);
+
+  color:
+    white;
+
+  border-radius:
+    40px;
+
+  font-size:
+    14px;
+
+  font-weight:
+    700;
+
+  transition:
+    .35s ease;
+
+}
+
+
+.rarevo-contact-button:hover {
+
+  background:
+    white;
+
+  color:
+    var(--black);
+
+  transform:
+    translateY(-4px);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.rarevo-footer {
+
+  background:
+    var(--black);
+
+  color:
+    white;
+
+  padding:
+    70px 5% 35px;
+
+}
+
+
+.rarevo-footer-top {
+
+  max-width:
+    1400px;
+
+  margin:
+    auto;
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  gap:
+    50px;
+
+}
+
+
+.rarevo-footer-logo {
+
+  font-size:
+    35px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    -2px;
+
+}
+
+
+.rarevo-footer-logo span {
+
+  color:
+    var(--orange);
+
+}
+
+
+.rarevo-footer-description {
+
+  max-width:
+    360px;
+
+  margin-top:
+    15px;
+
+  color:
+    #888;
+
+  font-size:
+    14px;
+
+  line-height:
+    1.6;
+
+}
+
+
+.rarevo-footer-links {
+
+  display:
+    flex;
+
+  gap:
+    70px;
+
+}
+
+
+.rarevo-footer-column h4 {
+
+  margin-bottom:
+    20px;
+
+  color:
+    var(--orange);
+
+  font-size:
+    11px;
+
+  letter-spacing:
+    2px;
+
+}
+
+
+.rarevo-footer-column a {
+
+  display:
+    block;
+
+  margin-bottom:
+    12px;
+
+  color:
+    #aaa;
+
+  font-size:
+    14px;
+
+  transition:
+    .3s ease;
+
+}
+
+
+.rarevo-footer-column a:hover {
+
+  color:
+    white;
+
+}
+
+
+.rarevo-footer-bottom {
+
+  max-width:
+    1400px;
+
+  margin:
+    60px auto 0;
+
+  padding-top:
+    25px;
+
+  border-top:
+    1px solid #252525;
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  color:
+    #666;
+
+  font-size:
+    12px;
+
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.rarevo-float-social {
+
+  position: fixed;
+
+  right: 24px;
+  bottom: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+
+  z-index: 9998;
+
+}
+
+
+.rarevo-float-btn {
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+
+  transition: .3s ease;
+
+}
+
+
+.rarevo-float-btn svg {
+
+  width: 26px;
+  height: 26px;
+
+}
+
+
+.rarevo-float-instagram {
+
+  background:
+    radial-gradient(circle at 30% 107%,
+      #fdf497 0%, #fdf497 5%,
+      #fd5949 45%, #d6249f 60%,
+      #285AEB 90%);
+
+}
+
+
+.rarevo-float-whatsapp {
+
+  background: #25D366;
+
+}
+
+
+.rarevo-float-btn:hover {
+
+  transform: translateY(-5px) scale(1.07);
+
+}
+
+
+@media (max-width: 700px) {
+
+  .rarevo-float-social {
+    right: 16px;
+    bottom: 16px;
+    gap: 12px;
+  }
+
+  .rarevo-float-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .rarevo-float-btn svg {
+    width: 23px;
+    height: 23px;
+  }
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal {
+
+  opacity:
+    0;
+
+  transform:
+    translateY(35px);
+
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+}
+
+
+.reveal.active {
+
+  opacity:
+    1;
+
+  transform:
+    translateY(0);
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .rarevo-nav {
+    gap: 18px;
+  }
+
+
+  .hero-device {
+
+    right:
+      3%;
+
+    width:
+      230px;
+
+  }
+
+
+  .rarevo-intro-grid {
+
+    grid-template-columns:
+      1fr;
+
+    gap:
+      65px;
+
+  }
+
+
+  .rarevo-stat-grid {
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+    gap:
+      30px;
+
+  }
+
+
+  .rarevo-stat {
+
+    border-left:
+      none;
+
+    border-top:
+      1px solid #ccc;
+
+    padding:
+      25px 0;
+
+  }
+
+
+  .rarevo-tool-grid {
+
+    grid-template-columns:
+      repeat(3,1fr);
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .rarevo-navbar {
+
+    top:
+      10px;
+
+    width:
+      calc(100% - 20px);
+
+    height:
+      62px;
+
+    padding:
+      0 18px;
+
+  }
+
+
+  .rarevo-nav {
+
+    display:
+      none;
+
+  }
+
+
+  .rarevo-logo {
+
+    font-size:
+      20px;
+
+  }
+
+
+  .rarevo-nav-button {
+
+    display:
+      block;
+
+    padding:
+      11px 17px;
+
+    font-size:
+      12px;
+
+  }
+
+
+  /* HERO */
+
+  .rarevo-hero {
+
+    min-height:
+      900px;
+
+    padding:
+      130px 22px
+      80px;
+
+    align-items:
+      flex-start;
+
+  }
+
+
+  .hero-heading {
+
+    font-size:
+      58px;
+
+    letter-spacing:
+      -4px;
+
+    line-height:
+      .91;
+
+  }
+
+
+  .hero-description {
+
+    font-size:
+      16px;
+
+    max-width:
+      100%;
+
+  }
+
+
+  .hero-buttons {
+
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+
+  }
+
+
+  .hero-device {
+
+    position:
+      absolute;
+
+    top:
+      auto;
+
+    right:
+      50%;
+
+    bottom:
+      40px;
+
+    transform:
+      translateX(50%)
+      rotate(-6deg);
+
+    width:
+      200px;
+
+  }
+
+
+  .hero-device img {
+
+    height:
+      370px;
+
+  }
+
+
+  /* STRIP */
+
+  .rarevo-client-strip {
+
+    justify-content:
+      flex-start;
+
+    overflow-x:
+      auto;
+
+    scrollbar-width:
+      none;
+
+    padding:
+      0 22px;
+
+  }
+
+
+  .rarevo-client-strip::-webkit-scrollbar {
+    display:
+      none;
+  }
+
+
+  .rarevo-strip-logo {
+    font-size:
+      10px;
+  }
+
+
+  /* INTRO */
+
+  .rarevo-intro-container {
+
+    width:
+      auto;
+
+    margin:
+      0 22px;
+
+    padding-top:
+      75px;
+
+  }
+
+
+  .rarevo-intro-heading {
+
+    font-size:
+      46px;
+
+    letter-spacing:
+      -3px;
+
+  }
+
+
+  .rarevo-intro-grid {
+
+    margin-top:
+      60px;
+
+  }
+
+
+  .rarevo-capabilities {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .rarevo-bottom-line {
+
+    display:
+      grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap:
+      18px;
+
+  }
+
+
+  /* WORK */
+
+  .rarevo-work {
+
+    padding:
+      90px 22px;
+
+  }
+
+
+  .rarevo-section-heading h2 {
+
+    font-size:
+      48px;
+
+    letter-spacing:
+      -3px;
+
+  }
+
+
+  .rarevo-project-grid {
+
+    grid-template-columns:
+      1fr;
+
+    gap:
+      45px;
+
+  }
+
+
+  .rarevo-project-image {
+
+    height:
+      300px;
+
+  }
+
+
+  /* STATS */
+
+  .rarevo-stats {
+
+    padding:
+      90px 22px;
+
+  }
+
+
+  .rarevo-stats-title {
+
+    font-size:
+      48px;
+
+    letter-spacing:
+      -3px;
+
+  }
+
+
+  .rarevo-stat-grid {
+
+    grid-template-columns:
+      1fr 1fr;
+
+    margin-top:
+      55px;
+
+  }
+
+
+  .rarevo-stat-number {
+
+    font-size:
+      50px;
+
+  }
+
+
+  /* TOOLKIT */
+
+  .rarevo-toolkit {
+
+    padding:
+      90px 18px;
+
+  }
+
+
+  .rarevo-toolkit-header h2 {
+
+    font-size:
+      46px;
+
+    letter-spacing:
+      -3px;
+
+  }
+
+
+  .rarevo-tool-grid {
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap:
+      30px 12px;
+
+  }
+
+
+  .rarevo-tool-box {
+
+    height:
+      95px;
+
+  }
+
+
+  .rarevo-tool-name {
+
+    font-size:
+      13px;
+
+  }
+
+
+  /* CONTACT */
+
+  .rarevo-contact {
+
+    padding:
+      95px 22px;
+
+  }
+
+
+  .rarevo-contact h2 {
+
+    font-size:
+      55px;
+
+    letter-spacing:
+      -4px;
+
+  }
+
+
+  .rarevo-contact::before {
+
+    font-size:
+      100px;
+
+  }
+
+
+  /* FOOTER */
+
+  .rarevo-footer {
+
+    padding:
+      60px 22px 30px;
+
+  }
+
+
+  .rarevo-footer-top {
+
+    flex-direction:
+      column;
+
+  }
+
+
+  .rarevo-footer-links {
+
+    display:
+      grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap:
+      30px;
+
+  }
+
+
+  .rarevo-footer-bottom {
+
+    flex-direction:
+      column;
+
+    gap:
+      10px;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .hero-heading {
+    font-size:
+      50px;
+  }
+
+
+  .rarevo-intro-heading {
+    font-size:
+      40px;
+  }
+
+
+  .rarevo-stat-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .rarevo-tool-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+}
+
+</style>
+
+<style>
+/* =========================================================
+   RAREVO — INTRO / SPLASH SCREEN
+   Black #050505 · White · Electric Blue #155BFF
+========================================================= */
+.rarevo-splash{
+  position:fixed;inset:0;z-index:100000;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:#050505;color:#fff;overflow:hidden;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:70px 70px;
+  animation:rarevoSplashOut .9s cubic-bezier(.77,0,.18,1) 2.6s forwards;
+}
+.rarevo-splash::before{
+  content:"";position:absolute;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(21,91,255,.28),transparent 68%);
+  filter:blur(10px);animation:rarevoGlow 2.6s ease-in-out infinite alternate;
+}
+.rarevo-splash-label{
+  position:relative;font-family:'Space Grotesk',Arial,sans-serif;
+  font-size:11px;font-weight:700;letter-spacing:4px;color:#155BFF;
+  margin-bottom:22px;opacity:0;animation:rarevoFade .7s ease .2s forwards;
+}
+.rarevo-splash-logo{
+  position:relative;display:flex;font-family:'Space Grotesk','Manrope',Arial,sans-serif;
+  font-weight:800;letter-spacing:-.06em;line-height:.9;
+  font-size:clamp(64px,13vw,170px);
+}
+.rarevo-splash-logo span{
+  display:inline-block;opacity:0;transform:translateY(60%);
+  animation:rarevoLetter .75s cubic-bezier(.2,.8,.2,1) forwards;
+}
+.rarevo-splash-logo .vo{color:#155BFF}
+.rarevo-splash-logo span:nth-child(1){animation-delay:.35s}
+.rarevo-splash-logo span:nth-child(2){animation-delay:.45s}
+.rarevo-splash-logo span:nth-child(3){animation-delay:.55s}
+.rarevo-splash-logo span:nth-child(4){animation-delay:.65s}
+.rarevo-splash-logo span:nth-child(5){animation-delay:.85s}
+.rarevo-splash-logo span:nth-child(6){animation-delay:.95s}
+.rarevo-splash-tag{
+  position:relative;margin-top:26px;font-family:'Inter',Arial,sans-serif;
+  font-size:12px;letter-spacing:3px;color:#aaa;
+  opacity:0;animation:rarevoFade .8s ease 1.2s forwards;
+}
+.rarevo-splash-bar{
+  position:absolute;left:0;bottom:0;height:3px;width:100%;
+  background:rgba(255,255,255,.1);
+}
+.rarevo-splash-bar::after{
+  content:"";display:block;height:100%;width:100%;background:#155BFF;
+  transform:scaleX(0);transform-origin:left;
+  animation:rarevoBar 2.3s cubic-bezier(.6,0,.2,1) .2s forwards;
+}
+.rarevo-splash-count{
+  position:absolute;right:5%;bottom:28px;font-family:'Space Grotesk',Arial,sans-serif;
+  font-size:13px;font-weight:700;letter-spacing:2px;color:#777;
+}
+.rarevo-splash.is-done{display:none}
+@keyframes rarevoLetter{to{opacity:1;transform:translateY(0)}}
+@keyframes rarevoFade{to{opacity:1}}
+@keyframes rarevoBar{to{transform:scaleX(1)}}
+@keyframes rarevoGlow{from{transform:scale(.85);opacity:.6}to{transform:scale(1.1);opacity:1}}
+@keyframes rarevoSplashOut{to{transform:translateY(-100%);visibility:hidden}}
+body.rarevo-splash-lock{overflow:hidden}
+@media(max-width:700px){
+  .rarevo-splash-label{font-size:10px;letter-spacing:3px}
+  .rarevo-splash-tag{font-size:10px;letter-spacing:2px}
+  .rarevo-splash::before{width:320px;height:320px}
+}
+@media(prefers-reduced-motion:reduce){
+  .rarevo-splash{animation-duration:.01ms;animation-delay:.6s}
+  .rarevo-splash *,.rarevo-splash::before{animation-duration:.01ms!important;animation-delay:0s!important}
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     INTRO / SPLASH SCREEN
+===================================================== -->
+<div class="rarevo-splash" id="rarevoSplash" aria-hidden="true">
+  <div class="rarevo-splash-label">DIGITAL GROWTH STUDIO</div>
+  <div class="rarevo-splash-logo">
+    <span>R</span><span>A</span><span>R</span><span>E</span><span class="vo">V</span><span class="vo">O</span>
+  </div>
+  <div class="rarevo-splash-tag">BUILD &#10022; GROW &#10022; SCALE</div>
+  <div class="rarevo-splash-count" id="rarevoSplashCount">0%</div>
+  <div class="rarevo-splash-bar"></div>
+</div>
+
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="rarevo-navbar">
+
+  <a href="#" class="rarevo-logo">
+    RARE<span>VO</span>
+  </a>
+
+  <nav class="rarevo-nav">
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="work.html">
+      Work
+    </a>
+
+    <a href="services.html">
+      Services
+    </a>
+
+    <a href="team.html">
+      Team
+    </a>
+
+    <a href="about.html">
+      About Us
+    </a>
+
+    <a href="contact.html">
+      Contact us
+    </a>
+
+    <a href="contact.html"
+       class="rarevo-nav-button">
+      Get In Touch
+    </a>
+
+  </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+  class="rarevo-hero"
+  id="home"
+>
+
+  <div class="hero-grid"></div>
+
+  <div class="hero-glow"></div>
+
+
+  <div class="hero-content reveal">
+
+    <div class="hero-eyebrow">
+      DIGITAL GROWTH PARTNER
+    </div>
+
+
+    <h1 class="hero-heading">
+
+      Your digital
+
+      <span class="orange">
+        growth
+      </span>
+
+      partner for websites & marketing.
+
+    </h1>
+
+
+    <p class="hero-description">
+
+      We build
+      <strong>high-converting websites</strong>
+      and powerful
+      <strong>digital marketing strategies</strong>
+      that help businesses attract customers,
+      build credibility and grow online.
+
+    </p>
+
+
+    <div class="hero-buttons">
+
+      <a
+        href="#contact"
+        class="hero-button hero-button-primary"
+      >
+        Start a Project →
+      </a>
+
+
+      <a
+        href="work.html"
+        class="hero-button hero-button-secondary"
+      >
+        View Our Work
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- DEVICE -->
+
+  <div class="hero-device">
+
+    <img
+      src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=700&q=85"
+      alt="Rarevo website design"
+    >
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MOVING STRIP
+===================================================== -->
+
+<div class="rarevo-flow-strip">
+
+  <div class="rarevo-flow-content">
+
+    <span class="flow-brand">
+      RAREVO
+    </span>
+
+    <div class="flow-line">
+      <div class="flow-dot"></div>
+    </div>
+
+    <span>
+      WEB DEVELOPMENT
+    </span>
+
+    <div class="flow-line">
+      <div class="flow-dot"></div>
+    </div>
+
+    <span>
+       Digital marketing
+    </span>
+
+    <div class="flow-line">
+      <div class="flow-dot"></div>
+    </div>
+
+    <span>
+      Content creation
+    </span>
+
+    <div class="flow-line">
+      <div class="flow-dot"></div>
+    </div>
+
+    <span>
+      Social Media
+    </span>
+
+    <div class="flow-line">
+      <div class="flow-dot"></div>
+    </div>
+
+    <span>
+      Branding
+    </span>
+
+    <div class="flow-line">
+      <div class="flow-dot"></div>
+    </div>
+
+    <span>
+      SEO
+    </span>
+
+  </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section
+  class="rarevo-intro-section"
+  id="services"
+>
+
+
+  <div class="rarevo-client-strip">
+
+    <div class="rarevo-strip-logo">
+      RAREVO
+    </div>
+
+    <div class="rarevo-strip-logo">
+      WEB
+    </div>
+
+    <div class="rarevo-strip-logo">
+      COMMERCE
+    </div>
+
+    <div class="rarevo-strip-logo">
+      GROWTH
+    </div>
+
+    <div class="rarevo-strip-logo">
+      DIGITAL
+    </div>
+
+    <div class="rarevo-strip-logo">
+      BRAND
+    </div>
+
+    <div class="rarevo-strip-logo">
+      CREATIVE
+    </div>
+
+  </div>
+
+
+
+  <div class="rarevo-intro-container reveal">
+
+    <div class="rarevo-intro-label">
+      BUILT FOR GROWTH
+    </div>
+
+
+    <h2 class="rarevo-intro-heading">
+
+      Websites that look
+      <span>better.</span>
+
+      Marketing that
+      <span>works harder.</span>
+
+    </h2>
+
+
+    <div class="rarevo-intro-grid">
+
+
+      <div class="rarevo-intro-left">
+
+        <p class="rarevo-intro-text">
+
+          Your website is more than a digital
+          brochure. It's where your brand meets
+          your customers.
+
+        </p>
+
+
+        <p class="rarevo-intro-text secondary">
+
+          At Rarevo, we combine thoughtful design,
+          modern web development and digital
+          marketing to help businesses build a
+          stronger presence online.
+
+        </p>
+
+
+        <a
+          href="contact.html"
+          class="rarevo-intro-button"
+        >
+
+          Work With Rarevo
+
+          <span>
+            →
+          </span>
+
+        </a>
+
+      </div>
+
+
+
+      <div class="rarevo-capabilities">
+
+
+        <div class="rarevo-capability">
+
+          <div class="rarevo-capability-top">
+
+            <span class="rarevo-capability-number">
+              01
+            </span>
+
+            <span class="rarevo-capability-arrow">
+              ↗
+            </span>
+
+          </div>
+
+          <h3>
+            Website Development
+          </h3>
+
+          <p>
+            Modern, responsive websites
+            designed to turn visitors
+            into customers.
+          </p>
+
+        </div>
+
+
+        <div class="rarevo-capability">
+
+          <div class="rarevo-capability-top">
+
+            <span class="rarevo-capability-number">
+              02
+            </span>
+
+            <span class="rarevo-capability-arrow">
+              ↗
+            </span>
+
+          </div>
+
+          <h3>
+            Digital Marketing
+          </h3>
+
+          <p>
+            Strategies that put your brand
+            in front of the right audience.
+          </p>
+
+        </div>
+
+
+        <div class="rarevo-capability">
+
+          <div class="rarevo-capability-top">
+
+            <span class="rarevo-capability-number">
+              03
+            </span>
+
+            <span class="rarevo-capability-arrow">
+              ↗
+            </span>
+
+          </div>
+
+          <h3>
+            Content Creation
+          </h3>
+
+          <p>
+            Strategies that put your brand
+            in front of the right audience.
+          </p>
+
+        </div>
+
+
+        <div class="rarevo-capability">
+
+          <div class="rarevo-capability-top">
+
+            <span class="rarevo-capability-number">
+              04
+            </span>
+
+            <span class="rarevo-capability-arrow">
+              ↗
+            </span>
+
+          </div>
+
+          <h3>
+            Social Media
+          </h3>
+
+          <p>
+            Improve visibility, reach more
+            people and grow organically.
+          </p>
+
+        </div>
+
+
+        <div class="rarevo-capability">
+
+          <div class="rarevo-capability-top">
+
+            <span class="rarevo-capability-number">
+              05
+            </span>
+
+            <span class="rarevo-capability-arrow">
+              ↗
+            </span>
+
+          </div>
+
+          <h3>
+            Branding
+          </h3>
+
+          <p>
+            Creative content and campaigns
+            that keep your brand relevant.
+          </p>
+
+        </div>
+
+
+        <div class="rarevo-capability">
+
+          <div class="rarevo-capability-top">
+
+            <span class="rarevo-capability-number">
+              06
+            </span>
+
+            <span class="rarevo-capability-arrow">
+              ↗
+            </span>
+
+          </div>
+
+          <h3>
+            SEO
+          </h3>
+
+          <p>
+            Distinctive visual identities
+            that make your business memorable.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <div class="rarevo-bottom-line">
+
+      <span>
+        DESIGN
+      </span>
+
+      <span>
+        DEVELOPMENT
+      </span>
+
+      <span>
+        MARKETING
+      </span>
+
+      <span>
+        GROWTH
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OUR WORK
+===================================================== -->
+
+<section
+  class="rarevo-work"
+  id="work"
+>
+
+
+  <div class="rarevo-section-heading reveal">
+
+    <div class="rarevo-section-eyebrow">
+      SELECTED WORK
+    </div>
+
+    <h2>
+      Work that makes
+      an impact.
+    </h2>
+
+    <p>
+      Websites, e-commerce experiences and
+      digital campaigns built to move businesses forward.
+    </p>
+
+  </div>
+
+
+
+  <div class="rarevo-project-grid">
+
+
+    <!-- PROJECT 1 -->
+
+    <article
+      class="rarevo-project reveal"
+    >
+
+      <div class="rarevo-project-image">
+
+       
+
+        <img
+          src="rarevo-commerce.jpg"
+          alt="Rarevo ecommerce project"
+        >
+
+      </div>
+
+      <div class="rarevo-project-info">
+
+        <h3>
+          Rarevo Commerce
+        </h3>
+
+        <p>
+          E-Commerce · Website Design · Development
+        </p>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- PROJECT 2 -->
+
+    <article
+      class="rarevo-project reveal"
+    >
+
+      <div class="rarevo-project-image">
+
+        
+
+        <img
+          src="cnc_laser_image_resized.png"
+          alt="KPR website project"
+        >
+
+      </div>
+
+      <div class="rarevo-project-info">
+
+        <h3>
+          KPR Design & Laser
+        </h3>
+
+        <p>
+          Brand Identity · Website Design · Development
+        </p>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- PROJECT 3 -->
+
+    <article
+      class="rarevo-project reveal"
+    >
+
+      <div class="rarevo-project-image">
+
+      
+
+        <img
+          src="digital-growth.jpg"
+          alt="Digital marketing project"
+        >
+
+      </div>
+
+      <div class="rarevo-project-info">
+
+        <h3>
+          Digital Growth
+        </h3>
+
+        <p>
+          Strategy · Digital Marketing · Growth
+        </p>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- PROJECT 4 -->
+
+    <article
+      class="rarevo-project reveal"
+    >
+
+      <div class="rarevo-project-image">
+
+      
+
+        <img
+          src="branding.jpg"
+          alt="Branding project"
+        >
+
+      </div>
+
+      <div class="rarevo-project-info">
+
+        <h3>
+          Brand Systems
+        </h3>
+
+        <p>
+          Branding · Creative · Digital Experience
+        </p>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+<style>
+/* ================================
+   RAREVO FOUNDER SECTION
+   BLACK + ELECTRIC BLUE
+================================ */
+
+.rarevo-founder-section {
+  background: #050505;
+  color: #ffffff;
+  padding: 110px 7vw;
+  width: 100%;
+  overflow: hidden;
+}
+
+.rarevo-founder-container {
+  max-width: 1450px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 90px;
+  align-items: center;
+}
+
+/* ================================
+   IMAGE
+================================ */
+
+.rarevo-founder-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.rarevo-founder-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: transform 0.6s ease;
+}
+
+.rarevo-founder-image-wrapper:hover .rarevo-founder-image {
+  transform: scale(1.025);
+}
+
+/* Electric blue decorative line */
+
+.rarevo-founder-image-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 2px solid #155BFF;
+  border-radius: 50%;
+  right: -35px;
+  bottom: -30px;
+  z-index: 0;
+}
+
+.rarevo-founder-image {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================================
+   RIGHT CONTENT
+================================ */
+
+.rarevo-founder-content {
+  max-width: 720px;
+}
+
+.rarevo-founder-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #155BFF;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.rarevo-founder-label::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: #155BFF;
+}
+
+.rarevo-founder-title {
+  margin: 0 0 25px;
+  font-size: clamp(42px, 5vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -3px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.rarevo-founder-title span {
+  color: #155BFF;
+}
+
+.rarevo-founder-description {
+  margin: 0 0 35px;
+  max-width: 690px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #b8b8b8;
+}
+
+/* ================================
+   FOUNDER CARD
+================================ */
+
+.rarevo-founder-card {
+  background: #1A1A1A;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 22px;
+  padding: 30px 32px;
+  margin-bottom: 35px;
+}
+
+.rarevo-founder-card-label {
+  color: #2F7BFF;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.rarevo-founder-name {
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.rarevo-founder-role {
+  margin: 0;
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ================================
+   FEATURES
+================================ */
+
+.rarevo-founder-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 40px;
+}
+
+.rarevo-founder-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #eeeeee;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.rarevo-founder-feature-icon {
+  flex-shrink: 0;
+  width: 21px;
+  height: 21px;
+  border: 1px solid #155BFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #155BFF;
+  font-size: 12px;
+  margin-top: 1px;
+}
+
+/* ================================
+   BUTTON
+================================ */
+
+.rarevo-founder-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 38px;
+  padding: 16px 32px;
+  background: #155BFF;
+  color: #050505;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.rarevo-founder-button:hover {
+  background: #2F7BFF;
+  transform: translateY(-3px);
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media screen and (max-width: 900px) {
+
+  .rarevo-founder-section {
+    padding: 75px 24px;
+  }
+
+  .rarevo-founder-container {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .rarevo-founder-image-wrapper {
+    max-width: 500px;
+  }
+
+  .rarevo-founder-content {
+    max-width: 100%;
+  }
+
+  .rarevo-founder-title {
+    font-size: clamp(40px, 11vw, 60px);
+    letter-spacing: -2px;
+  }
+
+  .rarevo-founder-description {
+    font-size: 16px;
+  }
+
+  .rarevo-founder-features {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .rarevo-founder-image-wrapper::after {
+    right: -12px;
+    bottom: -18px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .rarevo-founder-section {
+    padding: 60px 18px;
+  }
+
+  .rarevo-founder-container {
+    gap: 42px;
+  }
+
+  .rarevo-founder-card {
+    padding: 24px;
+  }
+
+  .rarevo-founder-name {
+    font-size: 24px;
+  }
+
+  .rarevo-founder-title {
+    font-size: 42px;
+  }
+
+  .rarevo-founder-button {
+    width: 100%;
+  }
+}
+</style>
+
+
+<section class="rarevo-founder-section">
+
+  <div class="rarevo-founder-container">
+
+    <!-- ================================
+         FOUNDER IMAGE
+    ================================= -->
+
+    <div class="rarevo-founder-image-wrapper">
+
+      <!--
+        IMPORTANT:
+        Replace the image URL below with your
+        uploaded founder image URL.
+      -->
+
+      <img
+        class="rarevo-founder-image"
+        src="7a5efdd5-b9e1-41e4-8b2e-0701b93c902c.png"
+        alt="Founder of Rarevo"
+        loading="lazy"
+      >
+
+    </div>
+
+
+    <!-- ================================
+         CONTENT
+    ================================= -->
+
+    <div class="rarevo-founder-content">
+
+      <div class="rarevo-founder-label">
+        About Rarevo
+      </div>
+
+      <h2 class="rarevo-founder-title">
+        We build brands<br>
+        that <span>move forward.</span>
+      </h2>
+
+      <p class="rarevo-founder-description">
+        Rarevo is a digital marketing and web development agency
+        helping ambitious businesses build stronger digital
+        identities, better websites, and marketing systems that
+        turn attention into growth.
+      </p>
+
+
+      <!-- ================================
+           FOUNDER CARD
+      ================================= -->
+
+      <div class="rarevo-founder-card">
+
+        <div class="rarevo-founder-card-label">
+          Meet the Founder
+        </div>
+
+        <h3 class="rarevo-founder-name">
+          Gowri Priya Yadav
+        </h3>
+
+        <p class="rarevo-founder-role">
+          Founder &amp; Creative Director at Rarevo, focused on
+          building high-quality websites, digital experiences,
+          branding, and growth strategies for modern businesses.
+        </p>
+
+      </div>
+
+
+      <!-- ================================
+           FEATURES
+      ================================= -->
+
+      <div class="rarevo-founder-features">
+
+        <div class="rarevo-founder-feature">
+          <span class="rarevo-founder-feature-icon">✓</span>
+          <span>Website Design &amp; Development</span>
+        </div>
+
+        <div class="rarevo-founder-feature">
+          <span class="rarevo-founder-feature-icon">✓</span>
+          <span>Digital Marketing &amp; Growth</span>
+        </div>
+
+        <div class="rarevo-founder-feature">
+          <span class="rarevo-founder-feature-icon">✓</span>
+          <span>Branding &amp; Creative Strategy</span>
+        </div>
+
+        <div class="rarevo-founder-feature">
+          <span class="rarevo-founder-feature-icon">✓</span>
+          <span>Performance-Focused Solutions</span>
+        </div>
+
+      </div>
+
+
+      <a href="contact.html" class="rarevo-founder-button">
+        Let's Work Together →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+<style>
+/* =========================================
+   RAREVO — WHY RAREVO / DIFFERENTIALS
+   BLACK + ELECTRIC BLUE
+========================================= */
+
+.rarevo-diff {
+  background: #050505;
+  color: #ffffff;
+  padding: 120px 6vw 130px;
+  overflow: hidden;
+}
+
+.rarevo-diff-container {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+/* ---------- HEADER ---------- */
+
+.rarevo-diff-header {
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+.rarevo-diff-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 18px;
+  border: 1px solid rgba(255,90,31,0.35);
+  border-radius: 50px;
+  color: #155BFF;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.rarevo-diff-title {
+  margin: 0 auto;
+  max-width: 950px;
+  font-size: clamp(42px, 5.8vw, 78px);
+  line-height: 1;
+  letter-spacing: -3.5px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.rarevo-diff-title span {
+  color: #155BFF;
+  font-style: italic;
+}
+
+/* ---------- GRID ---------- */
+
+.rarevo-diff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ---------- CARD ---------- */
+
+.rarevo-diff-card {
+  position: relative;
+  min-height: 280px;
+  padding: 34px;
+  background: #1A1A1A;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease;
+}
+
+.rarevo-diff-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255,90,31,0.45);
+  background: #202020;
+}
+
+/* ---------- NUMBER ---------- */
+
+.rarevo-diff-number {
+  position: absolute;
+  top: 25px;
+  right: 28px;
+
+  font-family: Georgia, serif;
+  font-size: 68px;
+  line-height: 1;
+  font-style: italic;
+
+  color: rgba(255,255,255,0.055);
+
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.rarevo-diff-card:hover .rarevo-diff-number {
+  color: rgba(255,90,31,0.12);
+  transform: translateY(-4px);
+}
+
+/* ---------- ICON ---------- */
+
+.rarevo-diff-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: rgba(255,90,31,0.08);
+  border: 1px solid rgba(255,90,31,0.35);
+
+  color: #155BFF;
+
+  margin-bottom: 42px;
+
+  transition: all 0.35s ease;
+}
+
+.rarevo-diff-card:hover .rarevo-diff-icon {
+  background: #155BFF;
+  color: #050505;
+  transform: rotate(-5deg);
+}
+
+.rarevo-diff-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ---------- TEXT ---------- */
+
+.rarevo-diff-card h3 {
+  margin: 0 0 13px;
+
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.rarevo-diff-card p {
+  margin: 0;
+
+  max-width: 410px;
+
+  color: #999999;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ---------- ORANGE LINE ---------- */
+
+.rarevo-diff-card::after {
+  content: "";
+
+  position: absolute;
+  left: 34px;
+  bottom: 0;
+
+  width: 0;
+  height: 3px;
+
+  background: #155BFF;
+
+  transition: width 0.4s ease;
+}
+
+.rarevo-diff-card:hover::after {
+  width: 90px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 1000px) {
+
+  .rarevo-diff {
+    padding: 90px 25px 100px;
+  }
+
+  .rarevo-diff-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rarevo-diff-title {
+    font-size: clamp(40px, 7vw, 60px);
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+
+  .rarevo-diff {
+    padding: 75px 18px 85px;
+  }
+
+  .rarevo-diff-header {
+    margin-bottom: 50px;
+  }
+
+  .rarevo-diff-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .rarevo-diff-title {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .rarevo-diff-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .rarevo-diff-card {
+    min-height: auto;
+    padding: 28px;
+  }
+
+  .rarevo-diff-number {
+    font-size: 58px;
+  }
+
+  .rarevo-diff-icon {
+    margin-bottom: 35px;
+  }
+
+  .rarevo-diff-card h3 {
+    font-size: 21px;
+  }
+
+  .rarevo-diff-card p {
+    font-size: 14px;
+  }
+}
+</style>
+
+
+<section class="rarevo-diff">
+
+  <div class="rarevo-diff-container">
+
+    <!-- HEADER -->
+
+    <div class="rarevo-diff-header">
+
+      <div class="rarevo-diff-label">
+        Why Rarevo
+      </div>
+
+      <h2 class="rarevo-diff-title">
+        What makes our work
+        <span>different.</span>
+      </h2>
+
+    </div>
+
+
+    <!-- CARDS -->
+
+    <div class="rarevo-diff-grid">
+
+
+      <!-- 01 -->
+
+      <div class="rarevo-diff-card">
+
+        <div class="rarevo-diff-number">
+          01
+        </div>
+
+        <div class="rarevo-diff-icon">
+
+          <svg viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.8">
+
+            <path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/>
+
+          </svg>
+
+        </div>
+
+        <h3>
+          Websites built for growth
+        </h3>
+
+        <p>
+          We don't build websites just to look good.
+          Every page is designed to attract attention,
+          build trust and move visitors toward action.
+        </p>
+
+      </div>
+
+
+      <!-- 02 -->
+
+      <div class="rarevo-diff-card">
+
+        <div class="rarevo-diff-number">
+          02
+        </div>
+
+        <div class="rarevo-diff-icon">
+
+          <svg viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.8">
+
+            <circle cx="12" cy="12" r="8"/>
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 2v3"/>
+            <path d="M12 19v3"/>
+
+          </svg>
+
+        </div>
+
+        <h3>
+          Strategy before execution
+        </h3>
+
+        <p>
+          We understand your business, audience and
+          goals before designing campaigns, websites
+          or digital experiences.
+        </p>
+
+      </div>
+
+
+      <!-- 03 -->
+
+      <div class="rarevo-diff-card">
+
+        <div class="rarevo-diff-number">
+          03
+        </div>
+
+        <div class="rarevo-diff-icon">
+
+          <svg viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.8">
+
+            <path d="M12 3l2.7 5.5L21 9.4l-4.5 4.4L17.6 20 12 17l-5.6 3 1.1-6.2L3 9.4l6.3-.9L12 3z"/>
+
+          </svg>
+
+        </div>
+
+        <h3>
+          Design that gets attention
+        </h3>
+
+        <p>
+          Clean visuals, strong identity and thoughtful
+          experiences that make your business look
+          credible and memorable.
+        </p>
+
+      </div>
+
+
+      <!-- 04 -->
+
+      <div class="rarevo-diff-card">
+
+        <div class="rarevo-diff-number">
+          04
+        </div>
+
+        <div class="rarevo-diff-icon">
+
+          <svg viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.8">
+
+            <path d="M4 17l6-6 4 4 6-8"/>
+            <path d="M16 7h4v4"/>
+
+          </svg>
+
+        </div>
+
+        <h3>
+          Marketing that drives results
+        </h3>
+
+        <p>
+          From social media to performance marketing,
+          we focus on strategies that generate attention,
+          leads and measurable business growth.
+        </p>
+
+      </div>
+
+
+      <!-- 05 -->
+
+      <div class="rarevo-diff-card">
+
+        <div class="rarevo-diff-number">
+          05
+        </div>
+
+        <div class="rarevo-diff-icon">
+
+          <svg viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.8">
+
+            <rect x="7" y="7" width="10" height="10" rx="2"/>
+            <path d="M9 1v3"/>
+            <path d="M15 1v3"/>
+            <path d="M9 20v3"/>
+            <path d="M15 20v3"/>
+            <path d="M20 9h3"/>
+            <path d="M20 15h3"/>
+            <path d="M1 9h3"/>
+            <path d="M1 15h3"/>
+
+          </svg>
+
+        </div>
+
+        <h3>
+          Technology that works smarter
+        </h3>
+
+        <p>
+          We combine modern web technologies, automation
+          and AI-powered tools to create faster and smarter
+          digital systems.
+        </p>
+
+      </div>
+
+
+      <!-- 06 -->
+
+      <div class="rarevo-diff-card">
+
+        <div class="rarevo-diff-number">
+          06
+        </div>
+
+        <div class="rarevo-diff-icon">
+
+          <svg viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.8">
+
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M8 12l2.5 2.5L16 9"/>
+
+          </svg>
+
+        </div>
+
+        <h3>
+          Direct support from our team
+        </h3>
+
+        <p>
+          No confusing layers or endless support tickets.
+          You work directly with the people building
+          your digital presence.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+<style>
+/* =========================================
+   RAREVO — OUR WORKS
+   BLACK + ELECTRIC BLUE
+========================================= */
+
+.rarevo-works {
+  background: #050505;
+  color: #ffffff;
+  padding: 130px 6vw;
+  overflow: hidden;
+}
+
+.rarevo-works-container {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+/* ---------- HEADER ---------- */
+
+.rarevo-works-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.rarevo-works-label {
+  display: inline-flex;
+  padding: 9px 18px;
+  border: 1px solid rgba(255, 90, 31, 0.4);
+  border-radius: 50px;
+
+  color: #155BFF;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  margin-bottom: 25px;
+}
+
+.rarevo-works-title {
+  margin: 0;
+
+  max-width: 800px;
+
+  font-size: clamp(44px, 6vw, 82px);
+  line-height: 0.98;
+
+  letter-spacing: -4px;
+
+  font-weight: 600;
+}
+
+.rarevo-works-title span {
+  color: #155BFF;
+  font-style: italic;
+}
+
+.rarevo-works-intro {
+  max-width: 390px;
+
+  color: #8f8f8f;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+
+/* =========================================
+   PROJECT GRID
+========================================= */
+
+.rarevo-works-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 70px 28px;
+}
+
+
+/* ---------- PROJECT ---------- */
+
+.rarevo-work {
+  position: relative;
+}
+
+
+/* ---------- IMAGE ---------- */
+
+.rarevo-work-image {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+
+  border-radius: 11px;
+
+  background: #1A1A1A;
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.rarevo-work-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.7s cubic-bezier(.2,.7,.2,1),
+    filter 0.7s ease;
+}
+
+.rarevo-work:hover .rarevo-work-image img {
+  transform: scale(1.06);
+  filter: brightness(0.72);
+}
+
+
+/* ---------- HOVER BUTTON ---------- */
+
+.rarevo-work-view {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -40%);
+
+  width: 110px;
+  height: 110px;
+
+  border-radius: 50%;
+
+  background: #155BFF;
+  color: #050505;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.rarevo-work:hover .rarevo-work-view {
+  opacity: 1;
+
+  transform: translate(-50%, -50%);
+}
+
+
+/* ---------- PROJECT INFO ---------- */
+
+.rarevo-work-info {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 30px;
+
+  padding-top: 22px;
+}
+
+.rarevo-work-name {
+  margin: 0 0 8px;
+
+  font-size: 25px;
+  line-height: 1.2;
+
+  font-weight: 600;
+}
+
+.rarevo-work-category {
+  margin: 0;
+
+  color: #8e8e8e;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.rarevo-work-year {
+  color: #666;
+
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   BOTTOM CTA
+========================================= */
+
+.rarevo-works-cta {
+  margin-top: 100px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.rarevo-works-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  padding: 18px 30px;
+
+  background: #155BFF;
+  color: #050505;
+
+  text-decoration: none;
+
+  border-radius: 50px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.rarevo-works-button:hover {
+  background: #2F7BFF;
+  transform: translateY(-3px);
+}
+
+.rarevo-works-arrow {
+  font-size: 18px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width: 900px) {
+
+  .rarevo-works {
+    padding: 100px 25px;
+  }
+
+  .rarevo-works-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rarevo-works-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+  .rarevo-works {
+    padding: 80px 18px;
+  }
+
+  .rarevo-works-header {
+    margin-bottom: 50px;
+  }
+
+  .rarevo-works-title {
+    font-size: 44px;
+    letter-spacing: -2.5px;
+  }
+
+  .rarevo-works-intro {
+    font-size: 15px;
+  }
+
+  .rarevo-work-image {
+    aspect-ratio: 4 / 3;
+    border-radius: 2px;
+  }
+
+  .rarevo-work-info {
+    padding-top: 17px;
+  }
+
+  .rarevo-work-name {
+    font-size: 21px;
+  }
+
+  .rarevo-work-view {
+    width: 85px;
+    height: 85px;
+    font-size: 2px;
+  }
+
+  .rarevo-works-cta {
+    margin-top: 70px;
+  }
+}
+</style>
+
+
+<section class="rarevo-works">
+
+  <div class="rarevo-works-container">
+
+    <!-- HEADER -->
+
+    <div class="rarevo-works-header">
+
+      <div>
+
+        <div class="rarevo-works-label">
+          Our Works
+        </div>
+
+        <h2 class="rarevo-works-title">
+          Work that makes
+          <span>businesses move.</span>
+        </h2>
+
+      </div>
+
+      <p class="rarevo-works-intro">
+        From websites and e-commerce experiences to branding
+        and digital marketing, we create digital work designed
+        to make businesses look better, perform better and grow.
+      </p>
+
+    </div>
+
+
+    <!-- PROJECTS -->
+
+    <div class="rarevo-works-grid">
+
+
+      <!-- PROJECT 01 -->
+
+      <article class="rarevo-work">
+
+        <a
+          href="https://www.rarevoindia.com/"
+          target="_blank"
+          rel="noopener"
+          style="text-decoration:none;color:inherit;"
+        >
+
+          <div class="rarevo-work-image">
+
+            <img
+              src="rarevobag.png"
+              alt="Rarevo website"
+              loading="lazy"
+            >
+
+            <div class="rarevo-work-view">
+              VIEW →
+            </div>
+
+          </div>
+
+        </a>
+
+        <div class="rarevo-work-info">
+
+          <div>
+
+            <h3 class="rarevo-work-name">
+              RAREVO
+            </h3>
+
+            <p class="rarevo-work-category">
+              E-commerce · Website Design · Branding
+            </p>
+
+          </div>
+
+          <span class="rarevo-work-year">
+            01
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 02 -->
+
+      <article class="rarevo-work">
+
+        <a
+          href="https://www.kprdesignandlaser.com/"
+          target="_blank"
+          rel="noopener"
+          style="text-decoration:none;color:inherit;"
+        >
+
+          <div class="rarevo-work-image">
+
+            <img
+              src="kpr.png"
+              alt="KPR website"
+              loading="lazy"
+            >
+
+            <div class="rarevo-work-view">
+              VIEW →
+            </div>
+
+          </div>
+
+        </a>
+
+        <div class="rarevo-work-info">
+
+          <div>
+
+            <h3 class="rarevo-work-name">
+              KPR Design Laser and Fabrication
+            </h3>
+
+            <p class="rarevo-work-category">
+              Website Design · Development · Digital
+            </p>
+
+          </div>
+
+          <span class="rarevo-work-year">
+            02
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 03 -->
+
+      <article class="rarevo-work">
+
+        <a
+          href="https://www.spicypotlimited.co.uk/"
+          target="_blank"
+          rel="noopener"
+          style="text-decoration:none;color:inherit;"
+        >
+
+          <div class="rarevo-work-image">
+
+            <img
+              src="e121e67d-c627-453b-9e62-e033390eca5f.png"
+              alt="Gloglamp website"
+              loading="lazy"
+            >
+
+            <div class="rarevo-work-view">
+              VIEW →
+            </div>
+
+          </div>
+
+        </a>
+
+        <div class="rarevo-work-info">
+
+          <div>
+
+            <h3 class="rarevo-work-name">
+              Spicy Pot
+            </h3>
+
+            <p class="rarevo-work-category">
+              Website · Branding · Digital Experience
+            </p>
+
+          </div>
+
+          <span class="rarevo-work-year">
+            03
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 04 -->
+
+      <article class="rarevo-work">
+
+        <a
+          href="https://upadhyay.pages.dev/"
+          target="_blank"
+          rel="noopener"
+          style="text-decoration:none;color:inherit;"
+        >
+
+          <div class="rarevo-work-image">
+
+            <img
+              src="d5b7dee7-d07d-4d4b-947a-1fe7066fe70d.png"
+              alt="Dip Your Toes website"
+              loading="lazy"
+            >
+
+            <div class="rarevo-work-view">
+              VIEW →
+            </div>
+
+          </div>
+
+        </a>
+
+        <div class="rarevo-work-info">
+
+          <div>
+
+            <h3 class="rarevo-work-name">
+              Upaadhyay
+            </h3>
+
+            <p class="rarevo-work-category">
+              Website · E-commerce · Creative
+            </p>
+
+          </div>
+
+          <span class="rarevo-work-year">
+            04
+          </span>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+    <!-- CTA -->
+
+    <div class="rarevo-works-cta">
+
+      <a
+        href="work.html"
+        class="rarevo-works-button"
+      >
+        Explore All Work
+        <span class="rarevo-works-arrow">↗</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+<style>
+/* =========================================
+   RAREVO — TESTIMONIALS
+   BLACK + ELECTRIC BLUE
+========================================= */
+
+.rarevo-testimonials {
+  background: #050505;
+  color: #ffffff;
+  padding: 130px 6vw;
+  overflow: hidden;
+}
+
+.rarevo-testimonials-container {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.rarevo-testimonials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.rarevo-testimonials-label {
+  display: inline-flex;
+  padding: 9px 18px;
+
+  border: 1px solid rgba(255, 90, 31, 0.4);
+  border-radius: 50px;
+
+  color: #155BFF;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  margin-bottom: 25px;
+}
+
+.rarevo-testimonials-title {
+  margin: 0;
+
+  max-width: 850px;
+
+  font-size: clamp(45px, 6vw, 80px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+
+  font-weight: 600;
+}
+
+.rarevo-testimonials-title span {
+  color: #155BFF;
+  font-style: italic;
+}
+
+.rarevo-testimonials-intro {
+  max-width: 380px;
+
+  margin: 0;
+
+  color: #8f8f8f;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   TESTIMONIAL GRID
+========================================= */
+
+.rarevo-testimonials-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.rarevo-testimonial-card {
+  position: relative;
+
+  min-height: 360px;
+
+  padding: 35px;
+
+  background: #1A1A1A;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease;
+}
+
+.rarevo-testimonial-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(255,90,31,0.45);
+
+  background: #202020;
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.rarevo-quote-mark {
+  position: absolute;
+
+  top: 20px;
+  right: 30px;
+
+  font-family: Georgia, serif;
+
+  font-size: 100px;
+
+  line-height: 1;
+
+  color: rgba(255,90,31,0.12);
+}
+
+.rarevo-testimonial-text {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  max-width: 470px;
+
+  font-size: 20px;
+  line-height: 1.6;
+
+  color: #eeeeee;
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+.rarevo-testimonial-stars {
+  display: flex;
+
+  gap: 5px;
+
+  margin-bottom: 25px;
+
+  color: #155BFF;
+
+  font-size: 16px;
+}
+
+
+/* =========================================
+   CLIENT
+========================================= */
+
+.rarevo-testimonial-client {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.rarevo-client-avatar {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #155BFF;
+
+  color: #050505;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.rarevo-client-name {
+  margin: 0 0 4px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.rarevo-client-role {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   BOTTOM STATEMENT
+========================================= */
+
+.rarevo-testimonials-bottom {
+  margin-top: 70px;
+
+  padding-top: 35px;
+
+  border-top: 1px solid rgba(255,255,255,0.08);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 30px;
+}
+
+.rarevo-testimonials-bottom p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 14px;
+}
+
+.rarevo-testimonials-bottom strong {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width: 950px) {
+
+  .rarevo-testimonials {
+    padding: 100px 25px;
+  }
+
+  .rarevo-testimonials-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rarevo-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rarevo-testimonial-card {
+    min-height: 300px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+  .rarevo-testimonials {
+    padding: 80px 18px;
+  }
+
+  .rarevo-testimonials-header {
+    margin-bottom: 50px;
+  }
+
+  .rarevo-testimonials-title {
+    font-size: 44px;
+    letter-spacing: -2.5px;
+  }
+
+  .rarevo-testimonials-intro {
+    font-size: 15px;
+  }
+
+  .rarevo-testimonial-card {
+    min-height: 330px;
+    padding: 28px;
+    border-radius: 19px;
+  }
+
+  .rarevo-testimonial-text {
+    font-size: 18px;
+  }
+
+  .rarevo-testimonials-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>
+
+
+<section class="rarevo-testimonials">
+
+  <div class="rarevo-testimonials-container">
+
+
+    <!-- HEADER -->
+
+    <div class="rarevo-testimonials-header">
+
+      <div>
+
+        <div class="rarevo-testimonials-label">
+          Testimonials
+        </div>
+
+        <h2 class="rarevo-testimonials-title">
+          What our clients
+          <span>say about us.</span>
+        </h2>
+
+      </div>
+
+      <p class="rarevo-testimonials-intro">
+        We believe the best measure of our work is what
+        happens after we launch. Here's what our clients
+        have to say about working with RAREVO.
+      </p>
+
+    </div>
+
+
+    <!-- TESTIMONIALS -->
+
+    <div class="rarevo-testimonials-grid">
+
+
+      <!-- TESTIMONIAL 01 -->
+
+      <article class="rarevo-testimonial-card">
+
+        <div>
+
+          <div class="rarevo-quote-mark">
+            “
+          </div>
+
+          <div class="rarevo-testimonial-stars">
+            ★ ★ ★ ★ ★
+          </div>
+
+          <p class="rarevo-testimonial-text">
+            “RAREVO completely transformed the way our
+            brand looks online. The website feels premium,
+            modern and much easier for our customers to use.”
+          </p>
+
+        </div>
+
+
+        <div class="rarevo-testimonial-client">
+
+          <div class="rarevo-client-avatar">
+            P
+          </div>
+
+          <div>
+
+            <p class="rarevo-client-name">
+              Pranitha Rani
+            </p>
+
+            <p class="rarevo-client-role">
+              Founder · KPR Design Laser and Fabrication.
+            </p>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- TESTIMONIAL 02 -->
+
+      <article class="rarevo-testimonial-card">
+
+        <div>
+
+          <div class="rarevo-quote-mark">
+            “
+          </div>
+
+          <div class="rarevo-testimonial-stars">
+            ★ ★ ★ ★ ★
+          </div>
+
+          <p class="rarevo-testimonial-text">
+            “The team understood our vision from the
+            beginning. They didn't just build a website —
+            they helped us create a stronger digital identity.”
+          </p>
+
+        </div>
+
+
+        <div class="rarevo-testimonial-client">
+
+          <div class="rarevo-client-avatar">
+            R
+          </div>
+
+          <div>
+
+            <p class="rarevo-client-name">
+              Radha Krishna
+            </p>
+
+            <p class="rarevo-client-role">
+              Founder · Upaadhyay
+            </p>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- TESTIMONIAL 03 -->
+
+      <article class="rarevo-testimonial-card">
+
+        <div>
+
+          <div class="rarevo-quote-mark">
+            “
+          </div>
+
+          <div class="rarevo-testimonial-stars">
+            ★ ★ ★ ★ ★
+          </div>
+
+          <p class="rarevo-testimonial-text">
+            “From design to marketing, everything felt
+            connected. RAREVO gave us a digital presence
+            that finally represents the quality of our business.”
+          </p>
+
+        </div>
+
+
+        <div class="rarevo-testimonial-client">
+
+          <div class="rarevo-client-avatar">
+            S
+          </div>
+
+          <div>
+
+            <p class="rarevo-client-name">
+              Sanjay Elisetti
+            </p>
+
+            <p class="rarevo-client-role">
+              Founder · KMMA NGO
+            </p>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+    <!-- BOTTOM -->
+
+    <div class="rarevo-testimonials-bottom">
+
+      <p>
+        <strong>Real businesses.</strong>
+        Real results. Real partnerships.
+      </p>
+
+      <p>
+        RAREVO — Digital experiences built to grow.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+<style>
+/* =========================================
+   RAREVO — FINAL CTA
+   BLACK + ELECTRIC BLUE
+========================================= */
+
+.rarevo-final-cta {
+  position: relative;
+
+  background: #050505;
+  color: #ffffff;
+
+  padding: 150px 6vw 160px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND ORANGE GLOW
+========================================= */
+
+.rarevo-final-cta::before {
+  content: "";
+
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  right: -220px;
+  bottom: -300px;
+
+  background: #155BFF;
+
+  opacity: 0.10;
+
+  filter: blur(120px);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.rarevo-final-cta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  left: -250px;
+  top: -250px;
+
+  background: #155BFF;
+
+  opacity: 0.05;
+
+  filter: blur(100px);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.rarevo-final-cta-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.rarevo-final-cta-label {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 30px;
+
+  border: 1px solid rgba(255,90,31,0.45);
+
+  border-radius: 50px;
+
+  color: #155BFF;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.rarevo-final-cta-title {
+  margin: 0 auto;
+
+  max-width: 1350px;
+
+  font-size: clamp(75px, 11vw, 165px);
+
+  line-height: 0.92;
+
+  letter-spacing: -6px;
+
+  font-weight: 600;
+
+  color: #ffffff;
+}
+
+.rarevo-final-cta-title span {
+  color: #155BFF;
+
+  font-style: italic;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.rarevo-final-cta-description {
+  max-width: 920px;
+
+  margin: 35px auto 0;
+
+  color: #8f8f8f;
+
+  font-size: 27px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.rarevo-final-cta-buttons {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-top: 45px;
+}
+
+
+/* PRIMARY */
+
+.rarevo-final-cta-primary {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-width: 250px;
+
+  padding: 26px 44px;
+
+  background: #155BFF;
+
+  color: #050505;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.rarevo-final-cta-primary:hover {
+  background: #2F7BFF;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 15px 40px rgba(255,90,31,0.2);
+}
+
+
+/* SECONDARY */
+
+.rarevo-final-cta-secondary {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-width: 220px;
+
+  padding: 26px 44px;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  font-size: 21px;
+
+  font-weight: 600;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.rarevo-final-cta-secondary:hover {
+  border-color: #155BFF;
+
+  background: rgba(255,90,31,0.08);
+
+  transform: translateY(-4px);
+}
+
+
+/* =========================================
+   SMALL TEXT
+========================================= */
+
+.rarevo-final-cta-note {
+  margin-top: 25px;
+
+  color: #555555;
+
+  font-size: 19px;
+}
+
+
+/* =========================================
+   DECORATIVE LINE
+========================================= */
+
+.rarevo-final-cta-line {
+  width: 100%;
+
+  height: 1px;
+
+  margin-top: 110px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,90,31,0.5),
+    transparent
+  );
+}
+
+
+/* =========================================
+   BOTTOM BRAND
+========================================= */
+
+.rarevo-final-cta-brand {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 35px;
+}
+
+.rarevo-final-cta-brand-name {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.rarevo-final-cta-brand-text {
+  margin: 0;
+
+  color: #555555;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width: 800px) {
+
+  .rarevo-final-cta {
+    padding: 110px 25px 120px;
+  }
+
+  .rarevo-final-cta-title {
+    font-size: clamp(60px, 13vw, 105px);
+
+    letter-spacing: -4px;
+  }
+
+  .rarevo-final-cta-description {
+    font-size: 22px;
+  }
+
+  .rarevo-final-cta-brand {
+    flex-direction: column;
+
+    gap: 12px;
+
+    text-align: center;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+  .rarevo-final-cta {
+    padding: 90px 18px 100px;
+  }
+
+  .rarevo-final-cta-label {
+    font-size: 14px;
+
+    letter-spacing: 2px;
+  }
+
+  .rarevo-final-cta-title {
+    font-size: 100px;
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+  }
+
+  .rarevo-final-cta-description {
+    margin-top: 28px;
+
+    font-size: 19px;
+  }
+
+  .rarevo-final-cta-buttons {
+    flex-direction: column;
+
+    width: 100%;
+
+    margin-top: 35px;
+  }
+
+  .rarevo-final-cta-primary,
+  .rarevo-final-cta-secondary {
+    width: 100%;
+
+    max-width: 320px;
+  }
+
+  .rarevo-final-cta-line {
+    margin-top: 75px;
+  }
+}
+</style>
+
+
+<section class="rarevo-final-cta">
+
+  <div class="rarevo-final-cta-container">
+
+
+    <!-- LABEL -->
+
+    <div class="rarevo-final-cta-label">
+      Let's Build Something
+    </div>
+
+
+    <!-- TITLE -->
+
+    <h2 class="rarevo-final-cta-title">
+
+    <span> Start here.</span>
+
+    </h2>
+
+
+    <!-- DESCRIPTION -->
+
+    <p class="rarevo-final-cta-description">
+
+      Whether you need a high-converting website,
+      a stronger brand, or a digital marketing strategy,
+      RAREVO is ready to turn your ideas into something
+      people remember.
+
+    </p>
+
+
+    <!-- BUTTONS -->
+
+    <div class="rarevo-final-cta-buttons">
+
+      <a
+        href="contact.html"
+        class="rarevo-final-cta-primary"
+      >
+        Start a Project
+        <span>↗</span>
+      </a>
+
+
+      <a
+        href="contact.html"
+        class="rarevo-final-cta-secondary"
+      >
+        Talk to Us
+        <span>→</span>
+      </a>
+
+    </div>
+
+
+    <p class="rarevo-final-cta-note">
+      Tell us what you're building. We'll take it from there.
+    </p>
+
+
+    <!-- DIVIDER -->
+
+    <div class="rarevo-final-cta-line"></div>
+
+
+    <!-- BRAND -->
+
+    <div class="rarevo-final-cta-brand">
+
+      <p class="rarevo-final-cta-brand-name">
+        RAREVO
+      </p>
+
+      <p class="rarevo-final-cta-brand-text">
+        Websites · Commerce · Growth · Digital · Brand · Creative
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section
+  class="rarevo-stats"
+>
+
+
+  <div class="rarevo-stats-inner reveal">
+
+
+    <h2 class="rarevo-stats-title">
+
+      Building digital
+      experiences that
+      turn <span>ideas into growth.</span>
+
+    </h2>
+
+
+    <div class="rarevo-stat-grid">
+
+
+      <div class="rarevo-stat">
+
+        <div class="rarevo-stat-number">
+          150<span>+</span>
+        </div>
+
+        <div class="rarevo-stat-label">
+          Projects Completed
+        </div>
+
+      </div>
+
+
+      <div class="rarevo-stat">
+
+        <div class="rarevo-stat-number">
+          10<span>+</span>
+        </div>
+
+        <div class="rarevo-stat-label">
+          Services & Capabilities
+        </div>
+
+      </div>
+
+
+      <div class="rarevo-stat">
+
+        <div class="rarevo-stat-number">
+          3
+        </div>
+
+        <div class="rarevo-stat-label">
+          Digital Growth Areas
+        </div>
+
+      </div>
+
+
+      <div class="rarevo-stat">
+
+        <div class="rarevo-stat-number">
+          1
+        </div>
+
+        <div class="rarevo-stat-label">
+          Growth Partner
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+<!-- =====================================================
+     TOOLKIT
+===================================================== -->
+
+<section
+  class="rarevo-toolkit"
+  id="toolkit"
+>
+
+
+  <div class="rarevo-toolkit-header reveal">
+
+    <div class="rarevo-toolkit-eyebrow">
+      OUR TOOLKIT
+    </div>
+
+    <h2>
+      Tech We
+      <span>Build With</span>
+    </h2>
+
+    <p>
+      The tools behind every website, brand
+      and campaign we create.
+    </p>
+
+  </div>
+
+
+
+  <div class="rarevo-tool-grid">
+
+
+    <div class="rarevo-tool reveal">
+
+      <div class="rarevo-tool-box">
+
+        <div class="
+          rarevo-tool-logo
+          logo-shopify
+        ">
+          S
+        </div>
+
+      </div>
+
+      <div class="rarevo-tool-name">
+        Shopify
+      </div>
+
+    </div>
+
+
+    <div class="rarevo-tool reveal">
+
+      <div class="rarevo-tool-box">
+
+        <div class="
+          rarevo-tool-logo
+          logo-react
+        ">
+          ⚛
+        </div>
+
+      </div>
+
+      <div class="rarevo-tool-name">
+        React
+      </div>
+
+    </div>
+
+
+    <div class="rarevo-tool reveal">
+
+      <div class="rarevo-tool-box">
+
+        <div class="
+          rarevo-tool-logo
+          logo-js
+        ">
+          JS
+        </div>
+
+      </div>
+
+      <div class="rarevo-tool-name">
+        JavaScript
+      </div>
+
+    </div>
+
+
+    <div class="rarevo-tool reveal">
+
+      <div class="rarevo-tool-box">
+
+        <div class="
+          rarevo-tool-logo
+          logo-wordpress
+        ">
+          W
+        </div>
+
+      </div>
+
+      <div class="rarevo-tool-name">
+        WordPress
+      </div>
+
+    </div>
+
+
+    <div class="rarevo-tool reveal">
+
+      <div class="rarevo-tool-box">
+
+        <div class="
+          rarevo-tool-logo
+          logo-canva
+        ">
+          Canva
+        </div>
+
+      </div>
+
+      <div class="rarevo-tool-name">
+        Canva
+      </div>
+
+    </div>
+
+
+    <div class="rarevo-tool reveal">
+
+      <div class="rarevo-tool-box">
+
+        <div class="logo-ps">
+          Ps
+        </div>
+
+      </div>
+
+      <div class="rarevo-tool-name">
+        Photoshop
+      </div>
+
+    </div>
+
+
+    <div class="rarevo-tool reveal">
+
+      <div class="rarevo-tool-box">
+
+        <div class="logo-chatgpt">
+          ◎
+        </div>
+
+      </div>
+
+      <div class="rarevo-tool-name">
+        ChatGPT
+      </div>
+
+    </div>
+
+
+    <div class="rarevo-tool reveal">
+
+      <div class="rarevo-tool-box">
+
+        <div class="
+          rarevo-tool-logo
+          logo-meta
+        ">
+          ∞
+        </div>
+
+      </div>
+
+      <div class="rarevo-tool-name">
+        Meta
+      </div>
+
+    </div>
+
+
+    <div class="rarevo-tool reveal">
+
+      <div class="rarevo-tool-box">
+
+        <div class="
+          rarevo-tool-logo
+          logo-google
+        ">
+          G
+        </div>
+
+      </div>
+
+      <div class="rarevo-tool-name">
+        Google Ads
+      </div>
+
+    </div>
+
+
+    <div class="rarevo-tool reveal">
+
+      <div class="rarevo-tool-box">
+
+        <div class="
+          rarevo-tool-logo
+          logo-figma
+        ">
+          F
+        </div>
+
+      </div>
+
+      <div class="rarevo-tool-name">
+        Figma
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT CTA
+===================================================== -->
+
+<section
+  class="rarevo-contact"
+  id="contact"
+>
+
+
+  <div class="rarevo-contact-inner reveal">
+
+    <div class="rarevo-contact-eyebrow">
+      HAVE A PROJECT IN MIND?
+    </div>
+
+
+    <h2>
+      Let's build
+      something
+      <strong>great.</strong>
+    </h2>
+
+
+    <p>
+
+      Tell us what you're building.
+      We'll help you turn the idea into
+      a digital experience that works.
+
+    </p>
+
+
+    <a
+      href="contact.html"
+      class="rarevo-contact-button"
+    >
+      Start a Conversation →
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="rarevo-footer">
+  <div class="rarevo-footer-top">
+    <div>
+      <div class="rarevo-footer-logo">RARE<span>VO</span></div>
+      <p class="rarevo-footer-description">Websites, e-commerce, branding and digital marketing for businesses ready to grow online.</p>
+    </div>
+    <div class="rarevo-footer-links">
+      <div class="rarevo-footer-column">
+        <h4>EXPLORE</h4>
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="team.html">Team</a>
+        <a href="about.html">About</a>
+        <a href="process.html">Process</a>
+      </div>
+      <div class="rarevo-footer-column">
+        <h4>FOLLOW US</h4>
+        <a href="https://www.instagram.com/rarevo__?stkn=bHd3cmw3cmZneDg2" target="_blank" rel="noopener">@rarevo__ · Studio</a>
+        <a href="https://www.instagram.com/rarevomedia.in?stkn=OGgza2xzYnNobXg3" target="_blank" rel="noopener">@rarevomedia.in · Social &amp; Marketing</a>
+        <a href="https://www.instagram.com/luxurylabel.bags?stkn=MXJycTBoa284cjk0Yw==" target="_blank" rel="noopener">@luxurylabel.bags · Bags</a>
+      </div>
+      <div class="rarevo-footer-column">
+        <h4>CONNECT</h4>
+        <a href="https://wa.me/916301559694" target="_blank" rel="noopener">WhatsApp · We reply fast</a>
+        <a href="https://wa.me/919177731239" target="_blank" rel="noopener">WhatsApp · Order &amp; bag enquiries</a>
+        <a href="contact.html">Contact Form</a>
+      </div>
+    </div>
+  </div>
+  <div class="rarevo-footer-bottom">
+    <span>© 2026 Rarevo. All rights reserved.</span>
+    <span>DESIGN · DEVELOPMENT · MARKETING</span>
+  </div>
+</footer>
+
+
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
+
+<div class="rarevo-float-social">
+
+  <!-- INSTAGRAM -->
+  <a
+    href="https://www.instagram.com/rarevomedia.in/"
+    target="_blank"
+    rel="noopener"
+    class="rarevo-float-btn rarevo-float-instagram"
+    aria-label="Follow Rarevo on Instagram"
+  >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+    </svg>
+  </a>
+
+  <!-- WHATSAPP -->
+  <a
+    href="https://wa.me/9177731239"
+    target="_blank"
+    rel="noopener"
+    class="rarevo-float-btn rarevo-float-whatsapp"
+    aria-label="Chat with Rarevo on WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.47 9.47 0 0 1-4.83-1.32l-.35-.2-3.58.94.96-3.49-.23-.36a9.45 9.45 0 0 1-1.45-5.04c0-5.22 4.25-9.47 9.48-9.47a9.4 9.4 0 0 1 6.7 2.78 9.4 9.4 0 0 1 2.77 6.7c0 5.23-4.25 9.46-9.46 9.46zM20.1 3.9A11.4 11.4 0 0 0 12.04.5C5.73.5.6 5.63.6 11.94c0 2.02.53 3.99 1.53 5.73L.5 23.5l5.97-1.57a11.43 11.43 0 0 0 5.57 1.42h.01c6.31 0 11.44-5.13 11.44-11.44 0-3.06-1.19-5.93-3.35-8.09z"/>
+    </svg>
+  </a>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   NAVBAR SCROLL
+===================================================== */
+
+const navbar =
+  document.querySelector(
+    ".rarevo-navbar"
+  );
+
+
+window.addEventListener(
+  "scroll",
+  function() {
+
+    if (window.scrollY > 40) {
+
+      navbar.style.boxShadow =
+        "0 10px 35px rgba(0,0,0,.10)";
+
+    } else {
+
+      navbar.style.boxShadow =
+        "none";
+
+    }
+
+  }
+);
+
+
+
+/* =====================================================
+   HERO DEVICE MOUSE MOVEMENT
+===================================================== */
+
+const device =
+  document.querySelector(
+    ".hero-device"
+  );
+
+
+document.addEventListener(
+  "mousemove",
+  function(event) {
+
+    if (
+      window.innerWidth < 768 ||
+      !device
+    ) {
+      return;
+    }
+
+
+    const x =
+      (
+        window.innerWidth / 2 -
+        event.clientX
+      ) / 100;
+
+
+    const y =
+      (
+        window.innerHeight / 2 -
+        event.clientY
+      ) / 100;
+
+
+    device.style.transform =
+      `translate(${x}px, ${y}px)
+       rotate(-6deg)`;
+
+  }
+);
+
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+const revealElements =
+  document.querySelectorAll(
+    ".reveal"
+  );
+
+
+const revealObserver =
+  new IntersectionObserver(
+
+    function(entries) {
+
+      entries.forEach(
+        function(entry) {
+
+          if (
+            entry.isIntersecting
+          ) {
+
+            entry.target
+              .classList
+              .add("active");
+
+            revealObserver.unobserve(
+              entry.target
+            );
+
+          }
+
+        }
+      );
+
+    },
+
+    {
+      threshold: .12
+    }
+
+  );
+
+
+revealElements.forEach(
+  function(element) {
+
+    revealObserver.observe(
+      element
+    );
+
+  }
+);
+
+
+
+/* =====================================================
+   SMOOTH NAVIGATION
+===================================================== */
+
+document
+  .querySelectorAll(
+    'a[href^="#"]'
+  )
+  .forEach(
+    function(link) {
+
+      link.addEventListener(
+        "click",
+        function(event) {
+
+          const target =
+            document.querySelector(
+              link.getAttribute(
+                "href"
+              )
+            );
+
+
+          if (target) {
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+              behavior: "smooth"
+            });
+
+          }
+
+        }
+      );
+
+    }
+  );
+
+</script>
+
+
+
+<style>
+/* =========================================================
+   RAREVO — FINAL BLACK / ELECTRIC BLUE / WHITE SYSTEM
+   Cohesive visual layer for this page
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+  --black:#050505;
+  --white:#FFFFFF;
+  --blue:#155BFF;
+  --blue-bright:#2F7BFF;
+  --blue-dark:#081A3A;
+  --charcoal:#111111;
+  --grey-1:#777777;
+  --grey-2:#AAAAAA;
+  --grey-3:#DDDDDD;
+}
+
+html{scroll-behavior:smooth}
+body{
+  background:var(--white);
+  color:var(--black);
+  font-family:'Inter',Arial,Helvetica,sans-serif;
+}
+h1,h2,h3,h4,.rarevo-logo,.rarevo-footer-logo,
+.rarevo-stat-number,.rarevo-contact h2,.rarevo-final-cta-title{
+  font-family:'Space Grotesk','Manrope',Arial,sans-serif;
+}
+
+/* Navbar — same premium shell */
+.rarevo-navbar{
+  background:rgba(5,5,5,.92);
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 10px 35px rgba(0,0,0,.14);
+}
+.rarevo-logo{color:#fff}
+.rarevo-logo span{color:var(--blue)}
+.rarevo-nav a{color:#e8e8e8}
+.rarevo-nav a:hover{color:var(--blue-bright)}
+.rarevo-nav a::after{background:var(--blue)}
+.rarevo-nav-button{
+  background:var(--blue)!important;
+  color:#fff!important;
+  border:1px solid var(--blue);
+}
+.rarevo-nav-button:hover{
+  background:#fff!important;
+  color:var(--black)!important;
+  border-color:#fff;
+}
+
+/* Hero — stronger black identity */
+.rarevo-hero{
+  background:var(--black);
+  color:#fff;
+}
+.hero-grid{
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+}
+.hero-glow{
+  background:var(--blue);
+  opacity:.16;
+}
+.hero-eyebrow{color:var(--blue-bright)}
+.hero-eyebrow::before{background:var(--blue)}
+.hero-heading .orange{color:var(--blue)}
+.hero-description{color:#a7a7a7}
+.hero-description strong{color:#fff}
+.hero-button-primary{
+  background:var(--blue);
+  color:#fff;
+}
+.hero-button-primary:hover{
+  background:#fff;
+  color:#050505;
+  box-shadow:0 15px 35px rgba(21,91,255,.28);
+}
+.hero-button-secondary{
+  background:transparent;
+  border-color:#444;
+  color:#fff;
+}
+.hero-button-secondary:hover{
+  border-color:var(--blue);
+  color:var(--blue-bright);
+}
+.hero-device{
+  box-shadow:0 35px 90px rgba(21,91,255,.18);
+}
+
+/* Flow strip */
+.rarevo-flow-strip{background:#000;border-color:#202020}
+.rarevo-flow-content .flow-brand,
+.flow-dot{color:var(--blue);background:var(--blue)}
+.rarevo-flow-content .flow-brand{color:var(--blue-bright)}
+
+/* Intro / services */
+.rarevo-intro-section{background:#fff}
+.rarevo-strip-logo:hover{color:var(--blue)}
+.rarevo-intro-label{color:var(--blue)}
+.rarevo-intro-label::before{background:var(--blue)}
+.rarevo-intro-heading span{color:var(--blue)}
+.rarevo-intro-button{
+  background:var(--black);
+  color:#fff;
+}
+.rarevo-intro-button:hover{background:var(--blue)}
+.rarevo-capability:hover{background:#f2f6ff}
+.rarevo-capability:hover .rarevo-capability-arrow{
+  color:var(--blue);
+}
+
+/* Work */
+.rarevo-work{background:var(--black)}
+.rarevo-section-eyebrow{color:var(--blue-bright)}
+.rarevo-project-number{background:var(--blue)}
+.rarevo-project-image{background:#111}
+.rarevo-project-image img{filter:saturate(.92)}
+.rarevo-project-info h3{color:#fff}
+
+/* Stats — clean white / blue accents */
+.rarevo-stats{background:#f6f7f9}
+.rarevo-stats-title span{color:var(--blue)}
+.rarevo-stat-number span{color:var(--blue)}
+
+/* Toolkit */
+.rarevo-toolkit{background:#050505}
+.rarevo-toolkit-eyebrow{color:var(--blue-bright)}
+.rarevo-toolkit-header h2 span{color:var(--blue)}
+.rarevo-tool-box{
+  background:#0d0d0d;
+  border-color:#292929;
+}
+.rarevo-tool:hover .rarevo-tool-box{
+  border-color:var(--blue);
+  box-shadow:0 18px 40px rgba(21,91,255,.14);
+}
+.rarevo-tool-box::before{background:var(--blue)}
+.rarevo-tool:hover .rarevo-tool-name{color:var(--blue-bright)}
+.logo-canva{color:var(--blue-bright)!important}
+.logo-ps{
+  border-color:var(--blue)!important;
+  color:var(--blue)!important;
+}
+.logo-chatgpt{
+  border-color:var(--blue)!important;
+  color:var(--blue)!important;
+}
+.logo-google{color:var(--blue)!important}
+.logo-figma{color:var(--blue)!important}
+
+/* Founder / additional sections */
+.rarevo-founder-section{background:#050505}
+.rarevo-founder-label{color:var(--blue)!important}
+.rarevo-founder-image-wrapper::after{border-color:var(--blue)!important}
+
+/* Contact CTA — blue signature, not full-site blue */
+.rarevo-contact{
+  background:var(--blue);
+  color:#fff;
+}
+.rarevo-contact-button{
+  background:#050505;
+  color:#fff;
+}
+.rarevo-contact-button:hover{
+  background:#fff;
+  color:#050505;
+}
+
+/* Final CTA */
+.rarevo-final-cta{
+  background:#fff!important;
+  color:#050505!important;
+}
+.rarevo-final-cta-label{color:var(--blue)!important}
+.rarevo-final-cta-title span{color:var(--blue)!important}
+.rarevo-final-cta-primary{
+  background:var(--black)!important;
+  color:#fff!important;
+  border-color:var(--black)!important;
+}
+.rarevo-final-cta-primary:hover{
+  background:var(--blue)!important;
+  border-color:var(--blue)!important;
+}
+.rarevo-final-cta-secondary{
+  border-color:#ccc!important;
+  color:#050505!important;
+}
+.rarevo-final-cta-secondary:hover{
+  border-color:var(--blue)!important;
+  color:var(--blue)!important;
+}
+.rarevo-final-cta-line{border-color:#ddd!important}
+.rarevo-final-cta-brand-name{color:#050505!important}
+
+/* Footer */
+.rarevo-footer{background:#050505}
+.rarevo-footer-logo span{color:var(--blue)}
+.rarevo-footer-column h4{color:var(--blue)}
+.rarevo-footer-column a:hover{color:var(--blue-bright)}
+
+
+/* Small premium blue signature */
+.rarevo-bottom-line span{color:var(--blue)!important}
+
+/* Accessibility / reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
+}
+
+/* Mobile polish */
+@media(max-width:700px){
+  .rarevo-navbar{
+    background:rgba(5,5,5,.96);
+  }
+  .rarevo-hero{
+    min-height:900px;
+  }
+  .hero-device{
+    box-shadow:0 25px 60px rgba(21,91,255,.2);
+  }
+}
+</style>
+
+<script>
+/* =====================================================
+   INTRO / SPLASH SCREEN
+===================================================== */
+(function(){
+  var splash=document.getElementById("rarevoSplash");
+  if(!splash) return;
+  var count=document.getElementById("rarevoSplashCount");
+  document.body.classList.add("rarevo-splash-lock");
+  var start=Date.now(), dur=2300;
+  var timer=setInterval(function(){
+    var p=Math.min(100,Math.round((Date.now()-start)/dur*100));
+    if(count) count.textContent=p+"%";
+    if(p>=100) clearInterval(timer);
+  },30);
+  function finish(){
+    splash.classList.add("is-done");
+    document.body.classList.remove("rarevo-splash-lock");
+  }
+  setTimeout(finish,3600);
+})();
+</script>
+</body>
+</html>
