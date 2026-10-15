@@ -8,62 +8,10 @@
       content="width=device-width, initial-scale=1.0">
 
 <title>RAREVO — Digital Growth Partner</title>
-      
-  <link rel="canonical" href="https://rarevomedia.pages.dev/">
 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050505'/%3E%3Ctext x='32' y='45' font-size='40' font-weight='800' text-anchor='middle' fill='%23155BFF' font-family='Arial,sans-serif'%3ER%3C/text%3E%3C/svg%3E">
-
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Rarevo">
-<meta property="og:title" content="RAREVO — Digital Growth Partner">
-<meta property="og:description" content="Rarevo builds high-converting websites, e-commerce stores, brands and digital marketing strategies that help businesses attract customers and grow online.">
-<meta property="og:url" content="https://rarevomedia.pages.dev/">
-<meta property="og:image" content="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=85">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Rarevo websites, e-commerce and marketing for growing businesses">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="RAREVO — Digital Growth Partner">
-<meta name="twitter:description" content="Rarevo builds high-converting websites, e-commerce stores, brands and digital marketing strategies that help businesses attract customers and grow online.">
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=85">
-
-<link rel="preload" as="image" href="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&amp;fit=crop&amp;w=700&amp;q=85" fetchpriority="high">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://rarevomedia.pages.dev/#organization",
-      "name": "Rarevo",
-      "url": "https://rarevomedia.pages.dev/",
-      "description": "Rarevo builds high-converting websites, e-commerce stores, brands and marketing strategies for growing businesses.",
-      "founder": { "@type": "Person", "name": "Gowri Priya Yadav" },
-      "sameAs": [
-        "https://www.instagram.com/rarevo__",
-        "https://www.instagram.com/rarevomedia.in"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://rarevomedia.pages.dev/#website",
-      "url": "https://rarevomedia.pages.dev/",
-      "name": "Rarevo",
-      "publisher": { "@id": "https://rarevomedia.pages.dev/#organization" }
-    }
-  ]
-}
-</script>    
-      
 <meta
   name="description"
-  content="Rarevo builds high-converting websites, e-commerce stores, brands and digital marketing strategies that help businesses attract customers and grow online."
+  content="Rarevo builds high-converting websites, e-commerce experiences, brands and digital marketing strategies."
 >
 
 <style>
@@ -2244,7 +2192,7 @@ a {
 }
 
 
-.rarevo-footer-column h3 {
+.rarevo-footer-column h4 {
 
   margin-bottom:
     20px;
@@ -3048,17 +2996,219 @@ body.rarevo-splash-lock{overflow:hidden}
   .rarevo-splash *,.rarevo-splash::before{animation-duration:.01ms!important;animation-delay:0s!important}
 }
 </style>
+<style id="rv-responsive">
+/* =========================================================
+   RAREVO — SHARED MOBILE / TABLET RESPONSIVE LAYER
+   Linked LAST on every page so it refines each page's own styles.
+   Breakpoints: 1024 (tablet) · 900 (nav -> menu) · 600 (phone) · 400 (small phone)
+========================================================= */
+
+/* ---------- Global safety (all screen sizes) ---------- */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+html,body{max-width:100%;overflow-x:hidden;}
+img,video,svg,canvas,iframe{max-width:100%;}
+img{height:auto;}
+.rv-burger{display:none;}
+.rv-drawer,.rv-overlay{display:none;}
+
+/* ---------- Hamburger button + drawer (injected by responsive.js) ---------- */
+@media (max-width:900px){
+
+  /* hide old desktop links + the old dead/redirecting buttons */
+  .rarevo-navbar .rarevo-nav,
+  .navbar .nav-links,
+  .navbar .nav-btn,
+  .rarevo-navbar .menu-btn,
+  .navbar .menu-btn{display:none!important;}
+
+  .rarevo-navbar,.navbar{
+    top:10px!important;
+    width:calc(100% - 20px)!important;
+    height:62px!important;
+    min-height:62px;
+    padding:0 14px 0 18px!important;
+    border-radius:16px!important;
+    justify-content:space-between!important;
+    gap:12px;
+  }
+  .rarevo-logo,.navbar .logo{font-size:21px!important;}
+
+  .rv-burger{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    width:44px;height:44px;
+    margin-left:auto;
+    border:0;border-radius:12px;
+    background:rgba(21,91,255,.12);
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+    flex:0 0 auto;
+  }
+  .rv-burger span{
+    display:block;width:20px;height:2px;border-radius:2px;
+    background:currentColor;
+    transition:transform .3s ease,opacity .2s ease;
+  }
+  /* burger colour follows the bar: white bar = dark lines, dark bar = light lines */
+  .rv-burger{color:#fff;}
+  .rv-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .rv-burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .rv-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  .rv-overlay{
+    display:block;position:fixed;inset:0;z-index:9990;
+    background:rgba(0,0,0,.55);
+    -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
+    opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s;
+  }
+  .rv-drawer{
+    display:flex;flex-direction:column;
+    position:fixed;z-index:9995;
+    top:82px;left:10px;right:10px;
+    max-height:calc(100vh - 100px);max-height:calc(100dvh - 100px);
+    overflow-y:auto;overscroll-behavior:contain;
+    padding:10px;
+    background:#0b0b0d;color:#fff;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:20px;
+    box-shadow:0 24px 60px rgba(0,0,0,.45);
+    opacity:0;visibility:hidden;transform:translateY(-12px) scale(.98);
+    transform-origin:top center;
+    transition:opacity .28s ease,transform .28s ease,visibility .28s;
+  }
+  .rv-drawer a{
+    display:flex;align-items:center;justify-content:space-between;
+    min-height:52px;padding:0 18px;
+    font-family:inherit;font-size:16px;font-weight:600;letter-spacing:.01em;
+    color:#f1f1f1!important;border-radius:12px;
+  }
+  .rv-drawer a + a{border-top:1px solid rgba(255,255,255,.06);}
+  .rv-drawer a:active,.rv-drawer a:hover{background:rgba(255,255,255,.07);}
+  .rv-drawer a.rv-current{color:#4f8bff!important;}
+  .rv-drawer a.rv-current::after{content:"";width:8px;height:8px;border-radius:50%;background:#2F7BFF;}
+  .rv-drawer a.rv-cta{
+    justify-content:center;margin-top:10px;
+    background:#155BFF;color:#fff!important;border-top:0;
+  }
+  .rv-drawer a.rv-cta:active{background:#2F7BFF;}
+  body.rv-menu-open{overflow:hidden;}
+  body.rv-menu-open .rv-overlay{opacity:1;visibility:visible;}
+  body.rv-menu-open .rv-drawer{opacity:1;visibility:visible;transform:none;}
+}
+
+/* ---------- Tablet (<=1024) ---------- */
+@media (max-width:1024px){
+  .section,section.section{padding-left:5%;padding-right:5%;}
+}
+
+/* ---------- Phone (<=700) ---------- */
+@media (max-width:700px){
+  .section,section.section{padding-top:84px;padding-bottom:64px;padding-left:20px;padding-right:20px;}
+
+  /* fluid headings so long words never push the page sideways */
+  h1{font-size:clamp(34px,10.5vw,52px)!important;line-height:1.05!important;letter-spacing:-.03em!important;overflow-wrap:break-word;}
+  h2{font-size:clamp(28px,8.4vw,42px)!important;line-height:1.1!important;letter-spacing:-.025em!important;overflow-wrap:break-word;}
+  h3{overflow-wrap:break-word;}
+  p,li{overflow-wrap:break-word;}
+
+  /* big outlined / ghost text that bleeds off screen */
+  .bg-text,.big-text,.ghost-text,[class*="outline-text"]{font-size:clamp(60px,26vw,120px)!important;max-width:100%;}
+
+  /* buttons: comfortable tap size */
+  a.btn,.btn,.rarevo-btn,button,.cta-btn,.hero-btn,[class*="-btn"]:not(.rv-burger):not(.menu-btn){
+    min-height:46px;
+  }
+  .hero-buttons,.hero-actions,.cta-buttons,.btn-row{display:flex;flex-direction:column;gap:12px;align-items:stretch;}
+  .hero-buttons a,.hero-actions a,.cta-buttons a,.btn-row a{width:100%;justify-content:center;text-align:center;}
+
+  /* forms: 16px stops iOS zooming on focus */
+  input,select,textarea{font-size:16px!important;max-width:100%;}
+  input:not([type=checkbox]):not([type=radio]),select,textarea{width:100%;}
+
+  /* tables scroll inside themselves instead of breaking the page */
+  table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+
+  /* footers stack neatly */
+  .rarevo-footer-top,.footer-top{flex-direction:column!important;gap:34px!important;}
+  .rarevo-footer-links{flex-wrap:wrap;gap:26px!important;}
+  .rarevo-footer-bottom,.footer-bottom{flex-direction:column!important;gap:10px!important;text-align:left;}
+
+  /* floating whatsapp / social buttons: smaller, tucked into the corner */
+  .whatsapp-float,.wa-float,.float-whatsapp,.social-float,.floating-btn{
+    width:50px!important;height:50px!important;right:14px!important;bottom:14px!important;
+  }
+}
+
+/* ---------- Small phone (<=400) ---------- */
+@media (max-width:400px){
+  .rarevo-logo,.navbar .logo{font-size:19px!important;}
+  .section,section.section{padding-left:16px;padding-right:16px;}
+}
+
+/* touch devices: no hover-only effects / custom cursors */
+@media (hover:none),(pointer:coarse){
+  .cursor-glow,.cur-ring,.cur-dot{display:none!important;}
+}
+
+/* ---------- Homepage hero: stack text, then phone mockup (no overlap) ---------- */
+@media (max-width:900px){
+  .rarevo-hero{
+    display:flex!important;flex-direction:column;justify-content:flex-start;
+    height:auto!important;min-height:0!important;
+    padding:118px 22px 70px!important;
+  }
+  .rarevo-hero .hero-content{width:100%;max-width:none;}
+  .hero-device{
+    position:relative!important;top:auto!important;right:auto!important;bottom:auto!important;left:auto!important;
+    transform:rotate(-4deg)!important;
+    width:min(240px,68%)!important;
+    margin:44px auto 0!important;
+  }
+  .hero-device img{width:100%;height:auto!important;max-height:420px;object-fit:cover;}
+  .hero-glow{max-width:100vw;}
+}
+@media (max-width:700px){
+  .hero-heading{font-size:clamp(36px,11vw,54px)!important;}
+  .hero-description{font-size:16px!important;line-height:1.65!important;}
+  .hero-buttons{flex-direction:column;align-items:stretch;gap:12px;}
+  .hero-button{width:100%;justify-content:center;text-align:center;}
+}
+
+/* ---------- Fix: project cards inherited the Work SECTION's big padding (huge gaps) ---------- */
+@media (max-width:900px){
+  .rarevo-works-grid{gap:44px 24px!important;}
+  .rarevo-works-grid .rarevo-work,
+  article.rarevo-work{padding:0!important;background:transparent!important;}
+  .rarevo-works-grid .rarevo-work-info{padding-top:16px;}
+}
+@media (max-width:700px){
+  .rarevo-works-grid{gap:36px!important;}
+}
+
+/* ---------- Fix: services cards — arrow button no longer overlaps the text ---------- */
+@media (max-width:900px){
+  .service-card{padding-bottom:84px!important;}
+}
+
+/* ---------- Fix: project images were cropped at the sides on phones ("G" / "S" cut off) ---------- */
+@media (max-width:900px){
+  .rarevo-work-image{aspect-ratio:16/10!important;}
+  .rarevo-work-image img{object-fit:contain!important;object-position:center;background:#1A1A1A;}
+}
+</style>
 </head>
 
 
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- =====================================================
      INTRO / SPLASH SCREEN
 ===================================================== -->
 <div class="rarevo-splash" id="rarevoSplash" aria-hidden="true">
-  <div class="rarevo-splash-label">GROWTH STUDIO</div>
+  <div class="rarevo-splash-label">DIGITAL GROWTH STUDIO</div>
   <div class="rarevo-splash-logo">
     <span>R</span><span>A</span><span>R</span><span>E</span><span class="vo">V</span><span class="vo">O</span>
   </div>
@@ -3075,7 +3225,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
 <header class="rarevo-navbar">
 
-  <a href="/" class="rarevo-logo">
+  <a href="#" class="rarevo-logo">
     RARE<span>VO</span>
   </a>
 
@@ -3112,7 +3262,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
   </nav>
 
-</header>  <main id="main">
+</header>
 
 
 
@@ -3190,7 +3340,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
     <img
       src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=700&q=85"
-      alt="Rarevo website design" width="700" height="1000" fetchpriority="high"
+      alt="Rarevo website design"
     >
 
   </div>
@@ -3334,7 +3484,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
         <p class="rarevo-intro-text">
 
-          Your website is more than a
+          Your website is more than a digital
           brochure. It's where your brand meets
           your customers.
 
@@ -3344,7 +3494,7 @@ body.rarevo-splash-lock{overflow:hidden}
         <p class="rarevo-intro-text secondary">
 
           At Rarevo, we combine thoughtful design,
-          modern web development and
+          modern web development and digital
           marketing to help businesses build a
           stronger presence online.
 
@@ -3604,7 +3754,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
         <img
           src="rarevo-commerce.jpg"
-          alt="Rarevo e-commerce project" width="1600" height="1000" loading="lazy"
+          alt="Rarevo ecommerce project"
         >
 
       </div>
@@ -3637,7 +3787,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
         <img
           src="cnc_laser_image_resized.png"
-          alt="KPR Design &amp; Laser website project" width="1600" height="1000" loading="lazy"
+          alt="KPR website project"
         >
 
       </div>
@@ -3670,7 +3820,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
         <img
           src="digital-growth.jpg"
-          alt="Marketing campaign project by Rarevo" width="1600" height="1000" loading="lazy"
+          alt="Digital marketing project"
         >
 
       </div>
@@ -3682,7 +3832,7 @@ body.rarevo-splash-lock{overflow:hidden}
         </h3>
 
         <p>
-          	Strategy · Marketing · Growth
+          Strategy · Digital Marketing · Growth
         </p>
 
       </div>
@@ -3703,7 +3853,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
         <img
           src="branding.jpg"
-          alt="Brand identity project by Rarevo" width="1600" height="1000" loading="lazy"
+          alt="Branding project"
         >
 
       </div>
@@ -3715,7 +3865,7 @@ body.rarevo-splash-lock{overflow:hidden}
         </h3>
 
         <p>
-          Branding · Creative · Experience Design
+          Branding · Creative · Digital Experience
         </p>
 
       </div>
@@ -4026,7 +4176,7 @@ body.rarevo-splash-lock{overflow:hidden}
       <img
         class="rarevo-founder-image"
         src="7a5efdd5-b9e1-41e4-8b2e-0701b93c902c.png"
-        alt="Founder of Rarevo" width="800" height="1000"
+        alt="Founder of Rarevo"
         loading="lazy"
       >
 
@@ -4050,7 +4200,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
       <p class="rarevo-founder-description">
         Rarevo is a digital marketing and web development agency
-        helping ambitious businesses build stronger brand
+        helping ambitious businesses build stronger digital
         identities, better websites, and marketing systems that
         turn attention into growth.
       </p>
@@ -4072,7 +4222,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
         <p class="rarevo-founder-role">
           Founder &amp; Creative Director at Rarevo, focused on
-          building high-quality websites, brand experiences,
+          building high-quality websites, digital experiences,
           branding, and growth strategies for modern businesses.
         </p>
 
@@ -4092,7 +4242,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
         <div class="rarevo-founder-feature">
           <span class="rarevo-founder-feature-icon">✓</span>
-          <span>Marketing &amp; Growth Strategy</span>
+          <span>Digital Marketing &amp; Growth</span>
         </div>
 
         <div class="rarevo-founder-feature">
@@ -4969,7 +5119,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
       <p class="rarevo-works-intro">
         From websites and e-commerce experiences to branding
-        and marketing, we create work designed
+        and digital marketing, we create digital work designed
         to make businesses look better, perform better and grow.
       </p>
 
@@ -4996,7 +5146,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
             <img
               src="rarevobag.png"
-              alt="Rarevo e-commerce website" width="1600" height="1000"
+              alt="Rarevo website"
               loading="lazy"
             >
 
@@ -5046,7 +5196,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
             <img
               src="kpr.png"
-              alt="KPR Design Laser and Fabrication website" width="1600" height="1000"
+              alt="KPR website"
               loading="lazy"
             >
 
@@ -5067,7 +5217,7 @@ body.rarevo-splash-lock{overflow:hidden}
             </h3>
 
             <p class="rarevo-work-category">
-              Website Design · Development · Marketing
+              Website Design · Development · Digital
             </p>
 
           </div>
@@ -5096,7 +5246,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
             <img
               src="e121e67d-c627-453b-9e62-e033390eca5f.png"
-              alt="Spicy Pot website" width="1600" height="1000"
+              alt="Gloglamp website"
               loading="lazy"
             >
 
@@ -5117,7 +5267,7 @@ body.rarevo-splash-lock{overflow:hidden}
             </h3>
 
             <p class="rarevo-work-category">
-              Website · Branding · User Experience
+              Website · Branding · Digital Experience
             </p>
 
           </div>
@@ -5146,7 +5296,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
             <img
               src="d5b7dee7-d07d-4d4b-947a-1fe7066fe70d.png"
-              alt="Upaadhyay website" width="1600" height="1000"
+              alt="Dip Your Toes website"
               loading="lazy"
             >
 
@@ -5715,7 +5865,7 @@ body.rarevo-splash-lock{overflow:hidden}
       </p>
 
       <p>
-        RAREVO — Websites and marketing built to grow.
+        RAREVO — Digital experiences built to grow.
       </p>
 
     </div>
@@ -6155,7 +6305,7 @@ body.rarevo-splash-lock{overflow:hidden}
     <p class="rarevo-final-cta-description">
 
       Whether you need a high-converting website,
-      a stronger brand, or a marketing strategy,
+      a stronger brand, or a digital marketing strategy,
       RAREVO is ready to turn your ideas into something
       people remember.
 
@@ -6205,7 +6355,7 @@ body.rarevo-splash-lock{overflow:hidden}
       </p>
 
       <p class="rarevo-final-cta-brand-text">
-        Websites · Commerce · Growth · Brand · Creative
+        Websites · Commerce · Growth · Digital · Brand · Creative
       </p>
 
     </div>
@@ -6228,7 +6378,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
     <h2 class="rarevo-stats-title">
 
-      Building
+      Building digital
       experiences that
       turn <span>ideas into growth.</span>
 
@@ -6271,7 +6421,7 @@ body.rarevo-splash-lock{overflow:hidden}
         </div>
 
         <div class="rarevo-stat-label">
-          Growth Areas
+          Digital Growth Areas
         </div>
 
       </div>
@@ -6560,7 +6710,7 @@ body.rarevo-splash-lock{overflow:hidden}
 
       Tell us what you're building.
       We'll help you turn the idea into
-      an online experience that works.
+      a digital experience that works.
 
     </p>
 
@@ -6582,15 +6732,15 @@ body.rarevo-splash-lock{overflow:hidden}
      FOOTER
 ===================================================== -->
 
-</main>  <footer class="rarevo-footer">
+<footer class="rarevo-footer">
   <div class="rarevo-footer-top">
     <div>
       <div class="rarevo-footer-logo">RARE<span>VO</span></div>
-      <p class="rarevo-footer-description">Websites, e-commerce, branding and marketing for businesses ready to grow online.</p>
+      <p class="rarevo-footer-description">Websites, e-commerce, branding and digital marketing for businesses ready to grow online.</p>
     </div>
     <div class="rarevo-footer-links">
       <div class="rarevo-footer-column">
-        <h3>EXPLORE</h3>
+        <h4>EXPLORE</h4>
         <a href="index.html">Home</a>
         <a href="work.html">Work</a>
         <a href="services.html">Services</a>
@@ -6599,13 +6749,13 @@ body.rarevo-splash-lock{overflow:hidden}
         <a href="process.html">Process</a>
       </div>
       <div class="rarevo-footer-column">
-        <h3>FOLLOW US</h3>
+        <h4>FOLLOW US</h4>
         <a href="https://www.instagram.com/rarevo__?stkn=bHd3cmw3cmZneDg2" target="_blank" rel="noopener">@rarevo__ · Studio</a>
         <a href="https://www.instagram.com/rarevomedia.in?stkn=OGgza2xzYnNobXg3" target="_blank" rel="noopener">@rarevomedia.in · Social &amp; Marketing</a>
         <a href="https://www.instagram.com/luxurylabel.bags?stkn=MXJycTBoa284cjk0Yw==" target="_blank" rel="noopener">@luxurylabel.bags · Bags</a>
       </div>
       <div class="rarevo-footer-column">
-        <h3>CONNECT</h3>
+        <h4>CONNECT</h4>
         <a href="https://wa.me/916301559694" target="_blank" rel="noopener">WhatsApp · We reply fast</a>
         <a href="https://wa.me/919177731239" target="_blank" rel="noopener">WhatsApp · Order &amp; bag enquiries</a>
         <a href="contact.html">Contact Form</a>
@@ -6844,6 +6994,7 @@ document
    Cohesive visual layer for this page
 ========================================================= */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root{
   --black:#050505;
@@ -7041,11 +7192,11 @@ h1,h2,h3,h4,.rarevo-logo,.rarevo-footer-logo,
 /* Footer */
 .rarevo-footer{background:#050505}
 .rarevo-footer-logo span{color:var(--blue)}
-.rarevo-footer-column h3{color:var(--blue)}
+.rarevo-footer-column h4{color:var(--blue)}
 .rarevo-footer-column a:hover{color:var(--blue-bright)}
 
 
-.skip-link{position:absolute;left:-9999px;top:10px;z-index:100001;padding:12px 18px;background:#155BFF;color:#fff;border-radius:8px;font-weight:700} .skip-link:focus{left:10px}  /* Small premium blue signature */
+/* Small premium blue signature */
 .rarevo-bottom-line span{color:var(--blue)!important}
 
 /* Accessibility / reduced motion */
@@ -7092,6 +7243,80 @@ h1,h2,h3,h4,.rarevo-logo,.rarevo-footer-logo,
     document.body.classList.remove("rarevo-splash-lock");
   }
   setTimeout(finish,3600);
+})();
+</script>
+<script id="rv-responsive-js">
+/* RAREVO — mobile menu (hamburger + slide-down drawer). Works on every page. */
+(function () {
+  'use strict';
+  function init() {
+    var header = document.querySelector('header.rarevo-navbar, header.navbar');
+    if (!header || header.querySelector('.rv-burger')) return;
+
+    // 1) collect the page's own nav links (keeps each page's menu items intact)
+    var seen = {}, links = [], cta = null;
+    header.querySelectorAll('nav a, ul a, a.nav-btn, a.rarevo-nav-button').forEach(function (a) {
+      var href = a.getAttribute('href'); var text = (a.textContent || '').replace(/\s+/g, ' ').trim();
+      if (!href || !text) return;
+      var isCta = a.classList.contains('rarevo-nav-button') || a.classList.contains('nav-btn');
+      if (isCta) { cta = cta || { href: href, text: text }; return; }
+      var key = href + '|' + text.toLowerCase();
+      if (seen[key]) return; seen[key] = 1;
+      links.push({ href: href, text: text });
+    });
+    if (!links.length) return;
+
+    // 2) remove the old non-working hamburgers (☰) some pages had
+    header.querySelectorAll('.menu-btn').forEach(function (b) { b.parentNode.removeChild(b); });
+
+    // 3) build button, overlay, drawer
+    var btn = document.createElement('button');
+    btn.className = 'rv-burger'; btn.type = 'button';
+    btn.setAttribute('aria-label', 'Open menu'); btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-controls', 'rvDrawer');
+    btn.innerHTML = '<span></span><span></span><span></span>';
+    header.appendChild(btn);
+
+    // match burger colour to the bar (light bar -> dark lines, dark bar -> light lines)
+    function tint() {
+      var m = (getComputedStyle(header).backgroundColor || '').match(/[\d.]+/g) || [];
+      var a = m.length > 3 ? parseFloat(m[3]) : 1;
+      var lum = a < 0.3 ? 0 : (0.299 * m[0] + 0.587 * m[1] + 0.114 * m[2]);
+      btn.style.color = lum > 150 ? '#111' : '#fff';
+    }
+    tint(); window.addEventListener('load', tint);
+
+    var overlay = document.createElement('div'); overlay.className = 'rv-overlay';
+    var drawer = document.createElement('nav'); drawer.className = 'rv-drawer'; drawer.id = 'rvDrawer';
+    drawer.setAttribute('aria-label', 'Mobile menu');
+
+    var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    links.forEach(function (l) {
+      var a = document.createElement('a'); a.href = l.href;
+      a.textContent = l.text.charAt(0) + l.text.slice(1);
+      var target = l.href.split('#')[0].split('/').pop().toLowerCase();
+      if (target && target === here) a.className = 'rv-current';
+      drawer.appendChild(a);
+    });
+    if (cta) {
+      var c = document.createElement('a'); c.href = cta.href; c.className = 'rv-cta'; c.textContent = cta.text;
+      drawer.appendChild(c);
+    }
+    document.body.appendChild(overlay); document.body.appendChild(drawer);
+
+    // 4) open / close
+    function setOpen(open) {
+      document.body.classList.toggle('rv-menu-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+    btn.addEventListener('click', function () { setOpen(!document.body.classList.contains('rv-menu-open')); });
+    overlay.addEventListener('click', function () { setOpen(false); });
+    drawer.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 900) setOpen(false); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
 </script>
 </body>
