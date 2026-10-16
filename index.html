@@ -2933,7 +2933,7 @@ a {
     linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
     linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
   background-size:70px 70px;
-  animation:rarevoSplashOut .9s cubic-bezier(.77,0,.18,1) 2.6s forwards;
+  animation:rarevoSplashOut .6s cubic-bezier(.77,0,.18,1) 1.8s forwards;
 }
 .rarevo-splash::before{
   content:"";position:absolute;width:520px;height:520px;border-radius:50%;
@@ -2973,7 +2973,7 @@ a {
 .rarevo-splash-bar::after{
   content:"";display:block;height:100%;width:100%;background:#155BFF;
   transform:scaleX(0);transform-origin:left;
-  animation:rarevoBar 2.3s cubic-bezier(.6,0,.2,1) .2s forwards;
+  animation:rarevoBar 1.6s cubic-bezier(.6,0,.2,1) .2s forwards;
 }
 .rarevo-splash-count{
   position:absolute;right:5%;bottom:28px;font-family:'Space Grotesk',Arial,sans-serif;
@@ -3199,7 +3199,7 @@ img{height:auto;}
   .rarevo-work-image img{object-fit:contain!important;object-position:center;background:#1A1A1A;}
 }
 </style>
-<link rel="preload" as="image" href="hero.webp" fetchpriority="high"> </head>
+<link rel="preconnect" href="https://images.unsplash.com"> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"> <link rel="preload" as="image" href="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=520&q=70" fetchpriority="high"> </head>
 
 
 <body>
@@ -3280,7 +3280,7 @@ img{height:auto;}
   <div class="hero-glow"></div>
 
 
-  <div class="hero-content reveal">
+  <div class="hero-content">
 
     <div class="hero-eyebrow">
       DIGITAL GROWTH PARTNER
@@ -3753,7 +3753,7 @@ img{height:auto;}
        
 
         <img
-          src="rarevo-commerce.jpg"
+          src="rarevo-commerce.webp" loading="lazy" decoding="async"
           alt="Rarevo ecommerce project"
         >
 
@@ -3786,7 +3786,7 @@ img{height:auto;}
         
 
         <img
-          src="cnc_laser_image_resized.png"
+          src="cnc_laser_image_resized.webp" loading="lazy" decoding="async"
           alt="KPR website project"
         >
 
@@ -6994,7 +6994,6 @@ document
    Cohesive visual layer for this page
 ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root{
   --black:#050505;
@@ -7232,7 +7231,7 @@ h1,h2,h3,h4,.rarevo-logo,.rarevo-footer-logo,
   if(!splash) return;
   var count=document.getElementById("rarevoSplashCount");
   document.body.classList.add("rarevo-splash-lock");
-  var start=Date.now(), dur=2300;
+  var start=Date.now(), dur=1600;
   var timer=setInterval(function(){
     var p=Math.min(100,Math.round((Date.now()-start)/dur*100));
     if(count) count.textContent=p+"%";
@@ -7242,7 +7241,7 @@ h1,h2,h3,h4,.rarevo-logo,.rarevo-footer-logo,
     splash.classList.add("is-done");
     document.body.classList.remove("rarevo-splash-lock");
   }
-  setTimeout(finish,3600);
+  setTimeout(finish,2500);
 })();
 </script>
 <script id="rv-responsive-js">
