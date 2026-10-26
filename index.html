@@ -7,11 +7,11 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
-<title>RAREVO — Digital Growth Partner</title>
+<title>Website Design &amp; Digital Marketing in Hyderabad | Rarevo</title>
 
 <meta
   name="description"
-  content="Rarevo is a Hyderabad women's fashion e-commerce brand and digital agency founded by Gowri Priya Yadav, offering websites, SEO, branding and marketing."
+  content="Rarevo builds Shopify stores, websites and digital marketing for growing businesses. Fixed-price packages and direct support from the team. Get a free quote."
 >
 
 <style>
@@ -3199,7 +3199,110 @@ img{height:auto;}
   .rarevo-work-image img{object-fit:contain!important;object-position:center;background:#1A1A1A;}
 }
 </style>
- <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=optional"> <link rel="preload" as="image" href="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=480&q=60" fetchpriority="high"> <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18516693910"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());   gtag('config', 'AW-18516693910'); </script> <script type="application/ld+json"> {   "@context": "https://schema.org",   "@graph": [     {       "@type": "Organization",       "@id": "https://rarevo.co.in/#organization",       "name": "Rarevo",       "url": "https://rarevo.co.in/",       "description": "Rarevo is a Hyderabad-based women's fashion e-commerce brand and digital growth agency offering website development, e-commerce, branding, SEO, content creation and social media marketing.",       "address": { "@type": "PostalAddress", "addressLocality": "Hyderabad", "addressRegion": "Telangana", "addressCountry": "IN" },       "founder": { "@id": "https://rarevo.co.in/#founder" },       "sameAs": [         "https://www.instagram.com/rarevo__",         "https://www.instagram.com/rarevomedia.in",         "https://rarevoindia.com/"       ]     },     {       "@type": "Person",       "@id": "https://rarevo.co.in/#founder",       "name": "Gowri Priya Yadav",       "jobTitle": "Founder & CEO",       "url": "https://rarevo.co.in/",       "worksFor": { "@id": "https://rarevo.co.in/#organization" },       "sameAs": ["https://www.linkedin.com/in/gowri-priya-yadav-1b04343a5"]     }   ] } </script> </head>
+ <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=optional"> <link rel="preload" as="image" href="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=480&q=60" fetchpriority="high"> <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18516693910"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());   gtag('config', 'AW-18516693910'); </script> <script type="application/ld+json"> {   "@context": "https://schema.org",   "@graph": [     {       "@type": "Organization",       "@id": "https://rarevo.co.in/#organization",       "name": "Rarevo",       "url": "https://rarevo.co.in/",       "description": "Rarevo is a digital marketing and web development agency offering website development, e-commerce, branding, SEO, content creation and social media marketing.",       "founder": { "@id": "https://rarevo.co.in/#founder" },       "sameAs": [         "https://www.instagram.com/rarevo__",         "https://www.instagram.com/rarevomedia.in"       ]     },     {       "@type": "Person",       "@id": "https://rarevo.co.in/#founder",       "name": "Gowri Priya Yadav",       "jobTitle": "Founder & Creative Director",       "url": "https://rarevo.co.in/",       "worksFor": { "@id": "https://rarevo.co.in/#organization" }     }   ] } </script> 
+<style id="rv-hero-showcase">
+/* ===== HERO SHOWCASE: overlapping dark project cards, two columns scrolling in opposite directions ===== */
+.hero-showcase{
+  position:absolute;right:2.5%;top:50%;transform:translateY(-50%);
+  width:min(44%,600px);height:min(82vh,720px);margin-top:34px;
+  display:grid;grid-template-columns:1fr 1fr;column-gap:10px;z-index:3;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 9%,#000 92%,transparent 100%);
+          mask-image:linear-gradient(to bottom,transparent 0,#000 9%,#000 92%,transparent 100%);
+}
+.rv-col{overflow:hidden;height:100%;padding:0 14px;}
+.rv-col-down{padding-top:0;}
+.rv-track{display:flex;flex-direction:column;will-change:transform;}
+.rv-col-up .rv-track{animation:rvUp 46s linear infinite;}
+.rv-col-down .rv-track{animation:rvDown 52s linear infinite;}
+.hero-showcase:hover .rv-track{animation-play-state:paused;}
+@keyframes rvUp{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+@keyframes rvDown{from{transform:translateY(-50%)}to{transform:translateY(0)}}
+
+/* card: dark glass panel, each one overlaps the one above it */
+.rv-card{
+  position:relative;display:block;flex:none;text-decoration:none;color:#fff;
+  margin-bottom:-8px;padding:12px 12px 14px;border-radius:20px;
+  background:linear-gradient(160deg,rgba(18,26,48,.96),rgba(9,12,24,.97));
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 -10px 30px rgba(0,0,0,.45),0 20px 50px rgba(0,0,0,.35);
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+/* staggered horizontal offsets, like the reference (uses `translate` so hover `transform` still works) */
+.rv-col-up   .rv-card:nth-child(5n+1){translate:34px 0;}
+.rv-col-up   .rv-card:nth-child(5n+2){translate:-12px 0;}
+.rv-col-up   .rv-card:nth-child(5n+3){translate:10px 0;}
+.rv-col-up   .rv-card:nth-child(5n+4){translate:-22px 0;}
+.rv-col-up   .rv-card:nth-child(5n+5){translate:20px 0;}
+.rv-col-down .rv-card:nth-child(5n+1){translate:6px 0;}
+.rv-col-down .rv-card:nth-child(5n+2){translate:26px 0;}
+.rv-col-down .rv-card:nth-child(5n+3){translate:-8px 0;}
+.rv-col-down .rv-card:nth-child(5n+4){translate:18px 0;}
+.rv-col-down .rv-card:nth-child(5n+5){translate:-14px 0;}
+.rv-card:hover{
+  z-index:20;transform:translateY(-6px) scale(1.04);border-color:#155BFF;
+  box-shadow:0 0 0 1px rgba(21,91,255,.45),0 28px 60px rgba(21,91,255,.28);
+}
+.rv-card-img{aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:#0a0d18;border:1px solid rgba(255,255,255,.06);}
+.rv-card-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;filter:saturate(.9) brightness(.92);transition:filter .35s;}
+.rv-card:hover .rv-card-img img{filter:none;}
+.rv-card-info{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:14px 4px 0;}
+.rv-card-cat{display:block;font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#2F7BFF;margin-bottom:8px;}
+.rv-card-name{display:block;font-size:16px;font-weight:600;letter-spacing:-.2px;color:#fff;line-height:1.2;}
+.rv-card-arrow{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(255,255,255,.28);background:transparent;color:#fff;font-size:15px;transition:background .3s,border-color .3s;}
+.rv-card:hover .rv-card-arrow{background:#155BFF;border-color:#155BFF;}
+
+@media (min-width:901px){
+  .rarevo-hero .hero-heading{max-width:46%;font-size:clamp(46px,5vw,84px);letter-spacing:-4px;line-height:.92;}
+  .rarevo-hero .hero-description{max-width:min(480px,44%);}
+}
+@media (max-width:900px){
+  .hero-showcase{position:relative!important;right:auto;top:auto;transform:none!important;width:100%;height:440px;margin:44px 0 0!important;column-gap:6px;}
+  .rv-col{padding:0 8px;}
+  .rv-card{margin-bottom:-6px;padding:10px 10px 12px;}.rv-card-cat{font-size:9.5px;letter-spacing:1.1px;margin-bottom:5px;}.rv-card-info{padding-top:10px;}
+  .rv-card-name{font-size:14px;}.rv-card-arrow{width:30px;height:30px;font-size:13px;}
+  .rv-card:nth-child(n){translate:0 0!important;}
+}
+@media (prefers-reduced-motion:reduce){.rv-track{animation:none!important;}}
+</style>
+
+<style id="rv-testimonial-3d">
+/* ===== TESTIMONIALS: 3D carousel ===== */
+.rv3d{position:relative;max-width:1100px;margin:0 auto;padding:30px 0 10px;outline:none;touch-action:pan-y;user-select:none;-webkit-user-select:none;}
+.rv3d-stage{position:relative;height:420px;perspective:1400px;transform-style:preserve-3d;cursor:grab;}
+.rv3d-stage.drag{cursor:grabbing;}
+.rv3d-card{
+  position:absolute;left:50%;top:0;width:min(460px,82vw);height:100%;margin-left:calc(min(460px,82vw) / -2);
+  display:flex;flex-direction:column;padding:32px;border-radius:24px;
+  background:linear-gradient(160deg,rgba(21,91,255,.16),rgba(255,255,255,.03) 55%),#0c0f18;
+  border:1px solid rgba(255,255,255,.10);box-shadow:0 30px 70px rgba(0,0,0,.55);
+  transition:transform .7s cubic-bezier(.22,.8,.25,1),opacity .7s ease,filter .7s ease,border-color .4s;
+  will-change:transform,opacity;backface-visibility:hidden;
+}
+.rv3d-card.is-active{border-color:rgba(21,91,255,.6);box-shadow:0 30px 80px rgba(21,91,255,.28);}
+.rv3d-top{display:flex;justify-content:space-between;align-items:center;}
+.rv3d-tag{padding:6px 12px;border:1px solid rgba(21,91,255,.55);border-radius:50px;color:#6f9bff;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:rgba(21,91,255,.1);}
+.rv3d-stars{color:#ffb800;letter-spacing:3px;font-size:15px;}
+.rv3d-quote-mark{font-size:70px;line-height:.8;color:#155BFF;margin-top:22px;font-family:Georgia,serif;}
+.rv3d-text{flex:1;margin-top:8px;color:#e8ecf5;font-size:clamp(16px,1.5vw,19px);line-height:1.65;font-style:italic;}
+.rv3d-client{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);}
+.rv3d-avatar{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex:none;background:#155BFF;color:#fff;font-weight:700;font-size:17px;}
+.rv3d-name{color:#fff;font-weight:700;font-size:16px;margin:0;}
+.rv3d-role{color:#8f8f8f;font-size:13px;margin:3px 0 0;line-height:1.4;}
+.rv3d-controls{display:flex;justify-content:center;align-items:center;gap:20px;margin-top:34px;}
+.rv3d-btn{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.04);color:#fff;font-size:18px;cursor:pointer;transition:background .25s,border-color .25s,transform .25s;}
+.rv3d-btn:hover{background:#155BFF;border-color:#155BFF;transform:scale(1.08);}
+.rv3d-btn:focus-visible,.rv3d:focus-visible{outline:2px solid #155BFF;outline-offset:4px;}
+.rv3d-dots{display:flex;gap:9px;}
+.rv3d-dot{width:8px;height:8px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.25);cursor:pointer;transition:width .35s,background .35s;}
+.rv3d-dot.on{width:28px;border-radius:8px;background:#155BFF;}
+.rv3d-hint{text-align:center;margin-top:18px;color:#5d6270;font-size:11px;letter-spacing:3px;text-transform:uppercase;}
+@media (max-width:700px){
+  .rv3d-stage{height:440px;}
+  .rv3d-card{padding:24px;}
+}
+@media (prefers-reduced-motion:reduce){.rv3d-card{transition:none;}}
+</style>
+</head>
 
 
 <body>
@@ -3288,34 +3391,19 @@ img{height:auto;}
 
 
     <h1 class="hero-heading">
-
-      Your digital
-
-      <span class="orange">
-        growth
-      </span>
-
-      partner for websites & marketing.
-
+      Shopify stores and marketing for growing businesses.
     </h1>
 
 
     <p class="hero-description">
-
-      We build
-      <strong>high-converting websites</strong>
-      and powerful
-      <strong>digital marketing strategies</strong>
-      that help businesses attract customers,
-      build credibility and grow online.
-
+      We design websites that look credible, then market them so customers find you, trust you and buy.
     </p>
 
 
     <div class="hero-buttons">
 
       <a
-        href="#contact"
+        href="contact.html"
         class="hero-button hero-button-primary"
       >
         Start a Project →
@@ -3334,15 +3422,97 @@ img{height:auto;}
   </div>
 
 
-  <!-- DEVICE -->
+  <!-- SHOWCASE (auto-scrolling project cards) -->
 
-  <div class="hero-device">
-
-    <img
-      src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=700&q=85"
-      alt="Rarevo website design"
-    >
-
+  <div class="hero-showcase" aria-label="Selected Rarevo projects">
+    <div class="rv-col rv-col-up" aria-hidden="true">
+      <div class="rv-track">
+        <a class="rv-card" href="https://elbadorata.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="elba-dorata.jpg" alt="Elba Dorata website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">E-commerce</span><span class="rv-card-name">Elba Dorata</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="https://stoaparis.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="stoa-paris.jpg" alt="Stoa Paris website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">E-commerce</span><span class="rv-card-name">Stoa Paris</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="#work" tabindex="-1">
+          <div class="rv-card-img"><img src="hero-zohan-cabins.jpg" alt="Zohan Cabins website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">Client Project</span><span class="rv-card-name">Zohan Cabins</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="https://upaadhyay.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="d5b7dee7-d07d-4d4b-947a-1fe7066fe70d.png" alt="Upaadhyay website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">Website · E-commerce</span><span class="rv-card-name">Upaadhyay</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="https://www.kprdesignandlaser.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="kpr.png" alt="KPR Design Laser website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">Client Project</span><span class="rv-card-name">KPR Design Laser</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="https://elbadorata.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="elba-dorata.jpg" alt="Elba Dorata website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">E-commerce</span><span class="rv-card-name">Elba Dorata</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="https://stoaparis.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="stoa-paris.jpg" alt="Stoa Paris website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">E-commerce</span><span class="rv-card-name">Stoa Paris</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="#work" tabindex="-1">
+          <div class="rv-card-img"><img src="hero-zohan-cabins.jpg" alt="Zohan Cabins website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">Client Project</span><span class="rv-card-name">Zohan Cabins</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="https://upaadhyay.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="d5b7dee7-d07d-4d4b-947a-1fe7066fe70d.png" alt="Upaadhyay website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">Website · E-commerce</span><span class="rv-card-name">Upaadhyay</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="https://www.kprdesignandlaser.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="kpr.png" alt="KPR Design Laser website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">Client Project</span><span class="rv-card-name">KPR Design Laser</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+      </div>
+    </div>
+    <div class="rv-col rv-col-down" aria-hidden="true">
+      <div class="rv-track">
+        <a class="rv-card" href="https://upaadhyay.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="d5b7dee7-d07d-4d4b-947a-1fe7066fe70d.png" alt="Upaadhyay website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">Website · E-commerce</span><span class="rv-card-name">Upaadhyay</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="https://www.kprdesignandlaser.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="kpr.png" alt="KPR Design Laser website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">Client Project</span><span class="rv-card-name">KPR Design Laser</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="https://elbadorata.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="elba-dorata.jpg" alt="Elba Dorata website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">E-commerce</span><span class="rv-card-name">Elba Dorata</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="https://stoaparis.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="stoa-paris.jpg" alt="Stoa Paris website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">E-commerce</span><span class="rv-card-name">Stoa Paris</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="#work" tabindex="-1">
+          <div class="rv-card-img"><img src="hero-zohan-cabins.jpg" alt="Zohan Cabins website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">Client Project</span><span class="rv-card-name">Zohan Cabins</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="https://upaadhyay.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="d5b7dee7-d07d-4d4b-947a-1fe7066fe70d.png" alt="Upaadhyay website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">Website · E-commerce</span><span class="rv-card-name">Upaadhyay</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="https://www.kprdesignandlaser.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="kpr.png" alt="KPR Design Laser website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">Client Project</span><span class="rv-card-name">KPR Design Laser</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="https://elbadorata.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="elba-dorata.jpg" alt="Elba Dorata website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">E-commerce</span><span class="rv-card-name">Elba Dorata</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="https://stoaparis.com/" target="_blank" rel="noopener" tabindex="-1">
+          <div class="rv-card-img"><img src="stoa-paris.jpg" alt="Stoa Paris website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">E-commerce</span><span class="rv-card-name">Stoa Paris</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+        <a class="rv-card" href="#work" tabindex="-1">
+          <div class="rv-card-img"><img src="hero-zohan-cabins.jpg" alt="Zohan Cabins website designed by Rarevo" loading="lazy"></div>
+          <div class="rv-card-info"><div><span class="rv-card-cat">Client Project</span><span class="rv-card-name">Zohan Cabins</span></div><span class="rv-card-arrow">↗</span></div>
+        </a>
+      </div>
+    </div>
   </div>
 
 </section>
@@ -3540,9 +3710,7 @@ img{height:auto;}
           </h3>
 
           <p>
-            Modern, responsive websites
-            designed to turn visitors
-            into customers.
+            Fast, mobile-friendly websites and Shopify stores built to turn visitors into customers.
           </p>
 
         </div>
@@ -3567,8 +3735,7 @@ img{height:auto;}
           </h3>
 
           <p>
-            Strategies that put your brand
-            in front of the right audience.
+            Targeted Meta and Google campaigns that put your brand in front of buyers ready to act.
           </p>
 
         </div>
@@ -3593,9 +3760,7 @@ img{height:auto;}
           </h3>
 
           <p>
-            Reels, photos, posts and website copy
-            that tell your brand story and keep
-            your audience engaged.
+            Photos, reels and creative content that keep your brand fresh and your audience engaged.
           </p>
 
         </div>
@@ -3620,8 +3785,7 @@ img{height:auto;}
           </h3>
 
           <p>
-            Improve visibility, reach more
-            people and grow organically.
+            Consistent posting, community management and organic growth that builds real followers.
           </p>
 
         </div>
@@ -3646,8 +3810,7 @@ img{height:auto;}
           </h3>
 
           <p>
-            Distinctive visual identities
-            that make your business memorable.
+            Logos, colours and visual identity that make your business look credible and memorable.
           </p>
 
         </div>
@@ -3672,9 +3835,7 @@ img{height:auto;}
           </h3>
 
           <p>
-            Search optimization that helps your
-            business rank on Google and get found
-            by new customers.
+            Search-optimised pages that help the right customers find you on Google first.
           </p>
 
         </div>
@@ -3756,7 +3917,7 @@ img{height:auto;}
 
         <img
           src="rarevo-commerce.jpg" loading="lazy" decoding="async"
-          alt="Rarevo ecommerce project"
+          alt="Rarevo's own Shopify store, rarevoindia.com"
         >
 
       </div>
@@ -3764,11 +3925,11 @@ img{height:auto;}
       <div class="rarevo-project-info">
 
         <h3>
-          Rarevo Commerce
+          Our Own Store
         </h3>
 
         <p>
-          E-Commerce · Website Design · Development
+          Rarevo\'s own e-commerce store
         </p>
 
       </div>
@@ -3789,7 +3950,7 @@ img{height:auto;}
 
         <img
           src="cnc_laser_image_resized.png" loading="lazy" decoding="async"
-          alt="KPR website project"
+          alt="Shopify store design for KPR Design &amp; Laser"
         >
 
       </div>
@@ -3822,7 +3983,7 @@ img{height:auto;}
 
         <img
           src="digital-growth.jpg"
-          alt="Digital marketing project"
+          alt="Digital marketing campaign results for a Rarevo client"
         >
 
       </div>
@@ -3855,7 +4016,7 @@ img{height:auto;}
 
         <img
           src="branding.jpg"
-          alt="Branding project"
+          alt="Brand identity and creative system by Rarevo"
         >
 
       </div>
@@ -4223,7 +4384,7 @@ img{height:auto;}
         </h3>
 
         <p class="rarevo-founder-role">
-          Founder &amp; CEO at Rarevo, focused on
+          Founder &amp; Creative Director at Rarevo, focused on
           building high-quality websites, digital experiences,
           branding, and growth strategies for modern businesses.
         </p>
@@ -5148,7 +5309,7 @@ img{height:auto;}
 
             <img
               src="rarevobag.png"
-              alt="Rarevo website"
+              alt="Rarevo own store, rarevoindia.com"
               loading="lazy"
             >
 
@@ -5165,11 +5326,11 @@ img{height:auto;}
           <div>
 
             <h3 class="rarevo-work-name">
-              RAREVO
+              Our Own Store
             </h3>
 
             <p class="rarevo-work-category">
-              E-commerce · Website Design · Branding
+              Rarevo\'s own e-commerce store
             </p>
 
           </div>
@@ -5198,7 +5359,7 @@ img{height:auto;}
 
             <img
               src="kpr.png"
-              alt="KPR website"
+              alt="Shopify store design for KPR Design &amp; Laser"
               loading="lazy"
             >
 
@@ -5248,7 +5409,7 @@ img{height:auto;}
 
             <img
               src="e121e67d-c627-453b-9e62-e033390eca5f.png"
-              alt="Spicy Pot website"
+              alt="Spicy Pot website design"
               loading="lazy"
             >
 
@@ -5288,7 +5449,7 @@ img{height:auto;}
       <article class="rarevo-work">
 
         <a
-          href="https://upadhyay.pages.dev/"
+          href="https://upaadhyay.com/"
           target="_blank"
           rel="noopener"
           style="text-decoration:none;color:inherit;"
@@ -5298,7 +5459,7 @@ img{height:auto;}
 
             <img
               src="d5b7dee7-d07d-4d4b-947a-1fe7066fe70d.png"
-              alt="Upaadhyay website"
+              alt="Upaadhyay website design"
               loading="lazy"
             >
 
@@ -5711,167 +5872,36 @@ img{height:auto;}
     </div>
 
 
-    <!-- TESTIMONIALS -->
+    <!-- TESTIMONIALS (3D carousel) -->
 
-    <div class="rarevo-testimonials-grid">
-
-
-      <!-- TESTIMONIAL 01 -->
-
-      <article class="rarevo-testimonial-card">
-
-        <div>
-
-          <div class="rarevo-quote-mark">
-            “
-          </div>
-
-          <div class="rarevo-testimonial-stars">
-            ★ ★ ★ ★ ★
-          </div>
-
-          <p class="rarevo-testimonial-text">
-            “RAREVO completely transformed the way our
-            brand looks online. The website feels premium,
-            modern and much easier for our customers to use.”
-          </p>
-
-        </div>
-
-
-        <div class="rarevo-testimonial-client">
-
-          <div class="rarevo-client-avatar">
-            P
-          </div>
-
-          <div>
-
-            <p class="rarevo-client-name">
-              Pranitha Rani
-            </p>
-
-            <p class="rarevo-client-role">
-              Founder · KPR Design Laser and Fabrication.
-            </p>
-
-          </div>
-
-        </div>
-
+    <div class="rv3d" id="rv3d" role="region" aria-roledescription="carousel" aria-label="Client testimonials" tabindex="0">
+      <div class="rv3d-stage">
+      <article class="rv3d-card" aria-roledescription="slide">
+        <div class="rv3d-top"><span class="rv3d-tag">Client Project</span><span class="rv3d-stars" aria-label="5 out of 5 stars">★★★★★</span></div>
+        <div class="rv3d-quote-mark" aria-hidden="true">“</div>
+        <p class="rv3d-text">RAREVO completely transformed the way our brand looks online. The website feels premium, modern and much easier for our customers to use.</p>
+        <div class="rv3d-client"><div class="rv3d-avatar">P</div><div><p class="rv3d-name">Pranitha Rani</p><p class="rv3d-role">Founder · KPR Design Laser and Fabrication.</p></div></div>
       </article>
-
-
-      <!-- TESTIMONIAL 02 -->
-
-      <article class="rarevo-testimonial-card">
-
-        <div>
-
-          <div class="rarevo-quote-mark">
-            “
-          </div>
-
-          <div class="rarevo-testimonial-stars">
-            ★ ★ ★ ★ ★
-          </div>
-
-          <p class="rarevo-testimonial-text">
-            “The team understood our vision from the
-            beginning. They didn't just build a website —
-            they helped us create a stronger digital identity.”
-          </p>
-
-        </div>
-
-
-        <div class="rarevo-testimonial-client">
-
-          <div class="rarevo-client-avatar">
-            R
-          </div>
-
-          <div>
-
-            <p class="rarevo-client-name">
-              Radha Krishna
-            </p>
-
-            <p class="rarevo-client-role">
-              Founder · Upaadhyay
-            </p>
-
-          </div>
-
-        </div>
-
+      <article class="rv3d-card" aria-roledescription="slide">
+        <div class="rv3d-top"><span class="rv3d-tag">Client Project</span><span class="rv3d-stars" aria-label="5 out of 5 stars">★★★★★</span></div>
+        <div class="rv3d-quote-mark" aria-hidden="true">“</div>
+        <p class="rv3d-text">The team understood our vision from the beginning. They didn't just build a website — they helped us create a stronger digital identity.</p>
+        <div class="rv3d-client"><div class="rv3d-avatar">R</div><div><p class="rv3d-name">Radha Krishna</p><p class="rv3d-role">Founder · Upaadhyay</p></div></div>
       </article>
-
-
-      <!-- TESTIMONIAL 03 -->
-
-      <article class="rarevo-testimonial-card">
-
-        <div>
-
-          <div class="rarevo-quote-mark">
-            “
-          </div>
-
-          <div class="rarevo-testimonial-stars">
-            ★ ★ ★ ★ ★
-          </div>
-
-          <p class="rarevo-testimonial-text">
-            “From design to marketing, everything felt
-            connected. RAREVO gave us a digital presence
-            that finally represents the quality of our business.”
-          </p>
-
-        </div>
-
-
-        <div class="rarevo-testimonial-client">
-
-          <div class="rarevo-client-avatar">
-            S
-          </div>
-
-          <div>
-
-            <p class="rarevo-client-name">
-              Sanjay Elisetti
-            </p>
-
-            <p class="rarevo-client-role">
-              Founder · KMMA NGO
-            </p>
-
-          </div>
-
-        </div>
-
+      <article class="rv3d-card" aria-roledescription="slide">
+        <div class="rv3d-top"><span class="rv3d-tag">Client Project</span><span class="rv3d-stars" aria-label="5 out of 5 stars">★★★★★</span></div>
+        <div class="rv3d-quote-mark" aria-hidden="true">“</div>
+        <p class="rv3d-text">From design to marketing, everything felt connected. RAREVO gave us a digital presence that finally represents the quality of our business.</p>
+        <div class="rv3d-client"><div class="rv3d-avatar">S</div><div><p class="rv3d-name">Sanjay Elisetti</p><p class="rv3d-role">Founder · KMMA NGO</p></div></div>
       </article>
-
-
+      </div>
+      <div class="rv3d-controls">
+        <button class="rv3d-btn" id="rv3dPrev" aria-label="Previous testimonial">←</button>
+        <div class="rv3d-dots" id="rv3dDots"></div>
+        <button class="rv3d-btn" id="rv3dNext" aria-label="Next testimonial">→</button>
+      </div>
+      <p class="rv3d-hint">Drag · Swipe · Click arrows</p>
     </div>
-
-
-    <!-- BOTTOM -->
-
-    <div class="rarevo-testimonials-bottom">
-
-      <p>
-        <strong>Real businesses.</strong>
-        Real results. Real partnerships.
-      </p>
-
-      <p>
-        RAREVO — Digital experiences built to grow.
-      </p>
-
-    </div>
-
 
   </div>
 
@@ -6410,7 +6440,7 @@ img{height:auto;}
         </div>
 
         <div class="rarevo-stat-label">
-          Services & Capabilities
+          Services &amp; Capabilities
         </div>
 
       </div>
@@ -6748,18 +6778,15 @@ img{height:auto;}
         <a href="services.html">Services</a>
         <a href="team.html">Team</a>
         <a href="about.html">About</a>
-        <a href="process.html">Process</a>
       </div>
       <div class="rarevo-footer-column">
         <h4>FOLLOW US</h4>
         <a href="https://www.instagram.com/rarevo__?stkn=bHd3cmw3cmZneDg2" target="_blank" rel="noopener">@rarevo__ · Studio</a>
         <a href="https://www.instagram.com/rarevomedia.in?stkn=OGgza2xzYnNobXg3" target="_blank" rel="noopener">@rarevomedia.in · Social &amp; Marketing</a>
-        <a href="https://www.instagram.com/luxurylabel.bags?stkn=MXJycTBoa284cjk0Yw==" target="_blank" rel="noopener">@luxurylabel.bags · Bags</a>
       </div>
       <div class="rarevo-footer-column">
         <h4>CONNECT</h4>
         <a href="https://wa.me/916301559694" target="_blank" rel="noopener">WhatsApp · We reply fast</a>
-        <a href="https://wa.me/919177731239" target="_blank" rel="noopener">WhatsApp · Order &amp; bag enquiries</a>
         <a href="contact.html">Contact Form</a>
       </div>
     </div>
@@ -6794,7 +6821,7 @@ img{height:auto;}
 
   <!-- WHATSAPP -->
   <a
-    href="https://wa.me/9177731239"
+    href="https://wa.me/919177731239"
     target="_blank"
     rel="noopener"
     class="rarevo-float-btn rarevo-float-whatsapp"
@@ -7222,6 +7249,15 @@ h1,h2,h3,h4,.rarevo-logo,.rarevo-footer-logo,
     box-shadow:0 25px 60px rgba(21,91,255,.2);
   }
 }
+
+/* Hero device: landscape frame for the Zohan Cabins desktop screenshot */
+.hero-device{width:460px;padding:8px;border-radius:18px;transform:translateY(-50%) rotate(-3deg);}
+.hero-device img{height:auto;aspect-ratio:1512/727;object-fit:cover;border-radius:11px;display:block;}
+@media (max-width:1200px){.hero-device{width:360px;right:3%;}}
+@media (max-width:900px){.hero-device{width:min(340px,86%)!important;}.hero-device img{max-height:none!important;height:auto!important;}}
+.hero-heading{max-width:min(720px,52vw);font-size:clamp(40px,5.4vw,84px);letter-spacing:-0.045em;line-height:.95;}
+.hero-description{max-width:min(560px,50vw);}
+@media (max-width:900px){.hero-heading,.hero-description{max-width:100%;}.hero-heading{font-size:clamp(34px,10vw,54px);}}
 </style>
 
 <script>
@@ -7318,6 +7354,67 @@ h1,h2,h3,h4,.rarevo-logo,.rarevo-footer-logo,
     window.addEventListener('resize', function () { if (window.innerWidth > 900) setOpen(false); });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+
+<script id="rv-testimonial-3d-js">
+(function(){
+  var root=document.getElementById('rv3d'); if(!root) return;
+  var stage=root.querySelector('.rv3d-stage');
+  var cards=[].slice.call(root.querySelectorAll('.rv3d-card'));
+  var dotsWrap=document.getElementById('rv3dDots');
+  var n=cards.length, cur=0, timer=null;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var dots=cards.map(function(_,i){
+    var b=document.createElement('button'); b.className='rv3d-dot'; b.type='button';
+    b.setAttribute('aria-label','Show testimonial '+(i+1));
+    b.addEventListener('click',function(){go(i);restart();});
+    dotsWrap.appendChild(b); return b;
+  });
+  function offset(i){ var d=i-cur; if(d>n/2)d-=n; if(d<-n/2)d+=n; return d; }
+  function render(){
+    var narrow=window.innerWidth<700;
+    var spread=narrow?58:300;
+    cards.forEach(function(c,i){
+      var d=offset(i), a=Math.abs(d);
+      var x=d*spread, rot=-d*38, z=-a*190, sc=1-a*.1;
+      if(a>1){x=Math.sign(d)*spread*1.4;}
+      c.style.transform='translateX('+x+'px) translateZ('+z+'px) rotateY('+rot+'deg) scale('+sc+')';
+      c.style.opacity=a===0?1:(a===1?(narrow?.35:.55):0);
+      c.style.zIndex=10-a;
+      c.style.pointerEvents=a>1?'none':'auto';
+      c.style.filter=a===0?'none':'brightness(.6)';
+      c.classList.toggle('is-active',a===0);
+      c.setAttribute('aria-hidden',a===0?'false':'true');
+      dots[i].classList.toggle('on',a===0);
+    });
+  }
+  function go(i){cur=(i+n)%n;render();}
+  function next(){go(cur+1);} function prev(){go(cur-1);}
+  function restart(){ if(timer)clearInterval(timer); if(!reduce) timer=setInterval(next,6000); }
+  document.getElementById('rv3dNext').addEventListener('click',function(){next();restart();});
+  document.getElementById('rv3dPrev').addEventListener('click',function(){prev();restart();});
+  cards.forEach(function(c,i){c.addEventListener('click',function(){ if(!moved && i!==cur){go(i);restart();} });});
+  root.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'){next();restart();} else if(e.key==='ArrowLeft'){prev();restart();}
+  });
+  // drag / swipe
+  var sx=null, moved=false;
+  stage.addEventListener('pointerdown',function(e){sx=e.clientX;moved=false;stage.classList.add('drag');});
+  window.addEventListener('pointermove',function(e){ if(sx!==null && Math.abs(e.clientX-sx)>8) moved=true; });
+  window.addEventListener('pointerup',function(e){
+    if(sx===null) return; var dx=e.clientX-sx; sx=null; stage.classList.remove('drag');
+    if(Math.abs(dx)>50){ dx<0?next():prev(); restart(); }
+    setTimeout(function(){moved=false;},0);
+  });
+  // wheel (horizontal intent only, so page scroll still works)
+  stage.addEventListener('wheel',function(e){
+    if(Math.abs(e.deltaX)>Math.abs(e.deltaY)&&Math.abs(e.deltaX)>30){e.preventDefault(); e.deltaX>0?next():prev(); restart();}
+  },{passive:false});
+  root.addEventListener('mouseenter',function(){if(timer)clearInterval(timer);});
+  root.addEventListener('mouseleave',restart);
+  window.addEventListener('resize',render);
+  render(); restart();
 })();
 </script>
 </body>
