@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+Allow: /images/
+Allow: /founder-images/
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /founder-images/
 
 Sitemap: https://rarevo.co.in/sitemap.xml
