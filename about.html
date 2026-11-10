@@ -62,7 +62,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;}
 /* ABOUT (soft grey) */
 .about{background:var(--soft);}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center;}
-.about h2{font-size:clamp(45px,6vw,76px);line-height:.95;letter-spacing:-4px;margin-bottom:50px;}
+.about h1,.about h2{font-size:clamp(45px,6vw,76px);line-height:.95;letter-spacing:-4px;margin-bottom:50px;}
 .about .section-number{color:var(--blue);}
 .about-text{color:#555;line-height:1.7;font-size:18px;}
 .about-list{margin-top:40px;border-top:1px solid var(--grey-3);}
@@ -194,7 +194,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;}
   .intro-bar{padding:130px 22px 60px;}
   .intro-stats{width:100%;justify-content:space-between;gap:24px;}
   .intro-stat h3{font-size:34px;}
-  .section-title,.about h2{font-size:48px;letter-spacing:-3px;}
+  .section-title,.about h1,.about h2{font-size:48px;letter-spacing:-3px;}
   .about-stats{margin-top:60px;}
   .about-stat h3{font-size:50px;}
   .journey-item{gap:20px;}
@@ -211,7 +211,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;}
   .rarevo-footer-bottom{flex-direction:column;gap:10px;}
 }
 @media (max-width:400px){
-  .section-title,.about h2{font-size:42px;}
+  .section-title,.about h1,.about h2{font-size:42px;}
   .cta h2{font-size:48px;}
 }
 </style>
@@ -344,7 +344,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;}
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://rarevo.co.in/images/gowri-priya-yadav-founder.jpg",
+        "url": "https://rarevo.co.in/founder-images/gowri-priya-yadav-founder%20(2).jpg",
         "width": 800,
         "height": 1000
       }
@@ -360,7 +360,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;}
       "url": "https://rarevo.co.in/about.html",
       "mainEntityOfPage": "https://rarevo.co.in/about.html",
       "image": [
-        "https://rarevo.co.in/images/gowri-priya-yadav-founder.jpg",
+        "https://rarevo.co.in/founder-images/gowri-priya-yadav-founder%20(2).jpg",
         "https://rarevo.co.in/founder-images/gowri-priya-yadav-founder-rarevo-leopard-dress-handbag-1x1.jpg",
         "https://rarevo.co.in/founder-images/gowri-priya-yadav-founder-rarevo-leopard-dress-handbag-4x3.jpg",
         "https://rarevo.co.in/founder-images/gowri-priya-yadav-founder-rarevo-leopard-dress-handbag-16x9.jpg",
@@ -556,7 +556,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;}
   }
 </style>
 
-<h2>WE MAKE<br>BRANDS<br>WHOLE.</h2>
+<h1>WE MAKE<br>BRANDS<br>WHOLE.</h1>
                 <div class="about-mark">
                     <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="200" cy="200" r="150" fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1.2"/>
@@ -761,16 +761,11 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;}
         </div>
         <div class="founder-grid">
             <figure class="founder-portrait reveal">
-                <picture>
-                    <source type="image/webp" srcset="images/gowri-priya-yadav-founder.webp">
-                    <img src="images/gowri-priya-yadav-founder.jpg" alt="Gowri Priya Yadav, Founder and Creative Director of Rarevo" title="Gowri Priya Yadav – Founder and Creative Director of Rarevo" width="800" height="1000" loading="eager" fetchpriority="high">
-                </picture>
-                <div class="founder-portrait-inner">
-                    <figcaption class="founder-caption">
+                <img src="founder-images/gowri-priya-yadav-founder%20(2).jpg" alt="Gowri Priya Yadav, Founder and Creative Director of Rarevo" title="Gowri Priya Yadav – Founder and Creative Director of Rarevo" width="800" height="1000" loading="eager" fetchpriority="high">
+                <figcaption class="founder-portrait-inner"><div class="founder-caption">
                         <strong>Gowri Priya Yadav</strong>
                         Founder &amp; Creative Director, RAREVO
-                    </figcaption>
-                </div>
+                    </div></figcaption>
             </figure>
             <div class="reveal">
                 <p class="founder-quote">"I didn't want to just build websites. I wanted to build brands people could actually hold, click, and scroll through."</p>
