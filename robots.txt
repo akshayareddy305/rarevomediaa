@@ -7,4 +7,19 @@ User-agent: Googlebot-Image
 Allow: /images/
 Allow: /founder-images/
 
+User-agent: OAI-SearchBot
+Allow: /
+Allow: /images/
+Allow: /founder-images/
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /images/
+Allow: /founder-images/
+
+User-agent: Bingbot
+Allow: /
+Allow: /images/
+Allow: /founder-images/
+
 Sitemap: https://rarevo.co.in/sitemap.xml
